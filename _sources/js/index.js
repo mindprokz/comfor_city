@@ -1,5 +1,6 @@
 import SendFunc from './sendForm.js';
 import FloatMenu from './floatMenu.js';
+
 //   $(document).ready(function () {
 //     'use strict';
 // //Аякс отправка форм
@@ -29,13 +30,25 @@ import FloatMenu from './floatMenu.js';
 //   });
 
 //Плавающее меню
-new FloatMenu({ 
-    elem : document.getElementById('navigation'), 
-    height : 200,
-    first_class : 'menu_fixed_on_top',
-    second_class : 'float_menu'
-  }).init();
+// new FloatMenu({
+//     elem : document.getElementById('navigation'),
+//     height : 200,
+//     first_class : 'menu_fixed_on_top',
+//     second_class : 'float_menu'
+//   }).init();
 
+// Нажатие на бургер
+document.querySelector('.burger').addEventListener('click', () => {
+  let menu = document.querySelector('.menu');
+  menu.classList.add('open_menu');
+  menu.classList.remove('close_menu');
+});
+
+document.querySelector('.closer').addEventListener('click', () => {
+  let menu = document.querySelector('.menu');
+  menu.classList.remove('open_menu');
+  menu.classList.add('close_menu');
+});
 
 // Отправка формы обратной связи скрипту для отправления по почте
 let data = {
@@ -44,5 +57,4 @@ let data = {
   telephone : 'input[name="telephone"]'
 };
 
-new SendFunc('application', data, 'mail');
-
+//new SendFunc('application', data, 'mail');

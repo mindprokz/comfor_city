@@ -1,10 +1,13 @@
 doctype html
-| 
-| <?php $lang = lang(); ?>
-html(lang!="<?php echo $lang;?>")
+html(lang!="ru")
   head
     include sections/header.jade
   body
+  
+  include sections/navigation.jade
+  include sections/section_1.jade
+  include sections/section_2.jade
+  include sections/section_3.jade
     //- example form
     //
       div.main
@@ -16,9 +19,6 @@ html(lang!="<?php echo $lang;?>")
           input#applicationTelephone(name="telephone" type="Tel" maxlength="20" placeholder="Ваш телефон")
           input(type="submit")
           div#app="Отправить"
-    div.container
-      div.test
-        | testing most words
     div#mail.not_visible_mail
 
     include sections/footer.jade  

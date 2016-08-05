@@ -1,7 +1,8 @@
-@import 
+@import
   'sass/_susy.scss',
   'sections/reset.scss',
   'sections/mail';
+
 $susy: (
   columns: 12,
   gutters: 1/2,
@@ -12,14 +13,33 @@ $susy: (
 $container: 1170px;
 $container-float: 100%;
 
+body {
+  font-family: Roboto, sans-serif;
+}
+
 .container-float{
   @include container($container-float);
 }
 
 .container{
   @include container($container);
-}  
-
-.test{
-  @include span(6);	
 }
+
+footer.blue {
+  background: url('images/pattern_blue.png') repeat;
+  height: 67px;
+
+  @media screen and (min-width: 1px) {
+    margin-top: 20px;
+  }
+
+  @media screen and (min-width: 800px) {
+    margin-top: 120px;
+  }
+}
+
+@import
+  'sections/navigation',
+  'sections/section_1',
+  'sections/section_2',
+  'sections/section_3'
