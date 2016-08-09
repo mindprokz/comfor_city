@@ -38,8 +38,68 @@ footer.blue {
   }
 }
 
+footer.white {
+  background: url('images/pattern_white.png') repeat;
+  height: 67px;
+
+  @media screen and (min-width: 1px) {
+    margin-top: 20px;
+  }
+
+  @media screen and (min-width: 800px) {
+    margin-top: 60px;
+  }
+}
+
+header {
+  background: rgba(255, 255, 255, 0.8);
+
+  @media screen and (min-width: 1px) {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 0;
+  }
+
+  @media screen and (min-width: 800px) {
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 25px;
+  }
+
+  h3 {
+    color: #DB9023;
+    text-transform: uppercase;
+    font-weight: 300;
+    text-align: center;
+    font-size: 25px;
+    padding-top: 20px;
+    padding-bottom: 15px;
+  }
+
+  p {
+    color: #595857;
+    line-height: 20px;
+    margin: auto;
+
+    @media screen and (min-width: 1px) {
+      width: 100%;
+    }
+
+    @media screen and (min-width: 600px) {
+      width: 600px;
+    }
+  }
+}
+
+
 @import
   'sections/navigation',
   'sections/section_1',
   'sections/section_2',
-  'sections/section_3'
+  'sections/section_3',
+  'sections/section_4',
+  'sections/section_5',
+  'sections/section_6',
+  'sections/section_7',
+  'sections/section_8',
+  'sections/section_9'

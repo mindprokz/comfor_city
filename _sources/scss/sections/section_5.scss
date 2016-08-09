@@ -1,5 +1,5 @@
-.map {
-  background: url('images/map.jpg') no-repeat;
+.advice {
+  background: url('images/novosel.jpg') no-repeat;
   background-size: cover;
   position: relative;
 
@@ -13,21 +13,35 @@
 
 
   footer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
+
+    @media screen and (min-width: 1px) {
+      position: static;
+      width: 100%;
+      padding-top: 30px;
+    }
+
+    @media screen and (min-width: 800px) {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding-top: 0;
+    }
 
     .button_bottom {
       padding: 0 5px;
+      box-sizing: border-box;
 
       @media screen and (min-width: 1px) {
-        display: none;
+        @include span(8);
+        margin-left: 17%;
+        margin-bottom: 15px;
       }
 
       @media screen and (min-width: 800px) {
-        display: block;
         @include span(3);
+        margin-left: 0;
+        margin-bottom: 0;
       }
 
       .text {
@@ -41,13 +55,8 @@
         transition: backgroun,color .3s, .3s, ease,ease;
 
         &:hover {
-          background: #EFEFEF;
-        }
-
-        &.active {
-          background: #5B9BD5;
+          background: #DB9023;
           color: #FFFFFF;
-          cursor: default;
         }
       }
     }

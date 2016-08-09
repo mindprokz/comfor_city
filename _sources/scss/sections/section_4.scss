@@ -1,0 +1,76 @@
+.report {
+  background: url('images/report.jpg') no-repeat;
+  background-size: cover;
+
+  .player {
+    background: url('images/report.jpg') no-repeat;
+    background-size: cover;
+    position: relative;
+    cursor: pointer;
+    border-radius: 5px;
+    overflow: hidden;
+
+    &:before {
+      content: ' ';
+      float: left;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5)
+    }
+
+    &:after {
+      content: '';
+      background: url('images/sprite.png') no-repeat -79px 0px;
+      height: 54px;
+      width: 54px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0.5;
+      transition: opacity .3 ease;
+    }
+
+    &:hover {
+      &:after {
+        opacity: 1;
+        transition: opacity .3 ease;
+      }
+    }
+
+    @media screen and (min-width: 1px) {
+      width: 100%;
+      height: 320px;
+      box-sizing: border-box;
+      margin: 40px auto;
+    }
+
+    @media screen and (min-width: 800px) {
+        width: 600px;
+        height: 400px;
+        margin: 150px auto 70px auto;
+    }
+  }
+
+  .folders {
+    margin-top: 50px;
+
+    .folder_elem {
+      @include span(4);
+
+      .wrap {
+        margin: auto;
+        width: 150px;
+        height: 120px;
+        font-size: 15px;
+        background: url('images/folder.png') no-repeat;
+        background-size: cover;
+        padding-top: 62px;
+        box-sizing: border-box;
+        text-align: center;
+        color: #595857;
+        cursor: pointer;
+      }
+    }
+  }
+}
