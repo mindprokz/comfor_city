@@ -11,8 +11,9 @@
     <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,700&amp;subset=latin,cyrillic-ext" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="libs/fancybox/source/jquery.fancybox.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.6.1/flexslider.min.css">
+    <link rel="stylesheet" href="style.css">
   </head>
   <body></body>
   <nav>
@@ -28,12 +29,12 @@
       </header>
       <footer>
         <div class="menu close_menu">
-          <div class="closer"></div><a href="/">Район</a><a href="/">Дом</a><a href="/">Надежность</a><a href="/">Строительство</a><a href="/">Квартиры</a><a href="/">Дизайны</a><a href="/">Новосёлам</a><a href="/">Офисы</a><a href="/">Девелопер</a><a href="/">Отзывы</a><a href="/">Цены и скидки</a><a href="/">Продажи</a>
+          <div class="closer"></div><a href="#position" class="anchor">Район</a><a href="#house" class="anchor">Дом</a><a href="#reliability" class="anchor">Надежность</a><a href="#building" class="anchor">Строительство</a><a href="#flats" class="anchor">Квартиры</a><a href="#design" class="anchor">Дизайны</a><a href="#newpeople" class="anchor">Новосёлам</a><a href="#officces" class="anchor">Офисы</a><a href="#developers" class="anchor">Девелопер</a><a href="#reviews" class="anchor">Отзывы</a><a href="#prices" class="anchor">Цены и скидки</a><a href="#sales" class="anchor">Продажи</a>
         </div>
       </footer>
     </div>
   </nav>
-  <section class="main">
+  <section class="main"><a name="position"></a>
     <div class="container"><img src="images/logo.png">
       <h3>вы будете уверены в том, что обеспечиваете себя и свою семью максимально безопасным, <br> удобным и комфортным жильем по самым привлекательным ценам</h3>
       <ul class="half">
@@ -56,7 +57,7 @@
     </div>
     <footer class="blue"></footer>
   </section>
-  <section class="map">
+  <section class="map"><a name="house"></a>
     <header>
       <div class="container">
         <h3>развитая и привлекательная инфраструктура района</h3>
@@ -86,7 +87,7 @@
       </div>
     </footer>
   </section>
-  <section class="building">
+  <section class="building"><a name="reliability"></a>
     <div class="container">
       <div class="wrap">
         <div class="home_photo"><img src="http://placehold.it/640/480" alt=""></div>
@@ -118,7 +119,7 @@
     </div>
     <footer class="blue"></footer>
   </section>
-  <section class="report">
+  <section class="report"><a name="building"></a>
     <header>
       <div class="container">
         <h3>честный фотоотчет о ходе строительства</h3>
@@ -150,7 +151,7 @@
     </div>
     <footer class="white"></footer>
   </section>
-  <section class="advice">
+  <section class="advice"><a name="newpeople"></a>
     <header>
       <div class="container">
         <h3>полезные советы счастливым новоселам</h3>
@@ -300,26 +301,98 @@
             <td>20</td>
             <td>3,8</td>
             <td>195</td>
-            <!--
-            div.main
-              h3="Внимание"
-              p="Оставьте ваши контактные данные и наш консультант<br/>свяжется с вами в течении 30 секунд"
-              form#application(action="mail.php" method="POST" name="application")
-                input#applicationName(name="name" maxlength="20" placeholder="Введите ваше имя" required)
-                input#applicationEmail(name="email" type="email" maxlength="20" placeholder="Ваш E-mail" required)
-                input#applicationTelephone(name="telephone" type="Tel" maxlength="20" placeholder="Ваш телефон")
-                input(type="submit")
-                div#app="Отправить"
-            -->
-            <div id="mail" class="not_visible_mail"></div>
-            <script src="/libs/jquery/dist/jquery.min.js"></script>
-            <script src="/libs/fancybox/source/jquery.fancybox.pack.js"></script>
-            <script src="/bundle.js"></script>
           </tr>
         </table>
       </div>
       <p>Указаны примерные платежи, для более точных расчетов связываетесь с менеджерами Комфортного Города или вашего банка</p>
     </div>
     <footer class="blue"></footer>
+  </section>
+  <section class="success"><a name="developers"></a>
+    <div class="container">
+      <h2>успешные проекты надежного девелопера</h2>
+      <p>Надежный застройщик:</p>
+      <ul>
+        <li><span>Контроль качества на всех этапах строительства</span></li>
+        <li><span>Слаженная команда управленцев</span></li>
+        <li><span>Сильные финансовые партнеры: Жилстрой, АзияКредит</span></li>
+        <li><span>Соблюдаются стандарты строительства: ГОСТЫ и СНИПы</span></li>
+      </ul>
+      <div class="company">
+        <div class="elem"><img src="images/comfort.jpg" alt=""></div>
+        <div class="elem"><img src="images/shan.jpg" alt=""></div>
+        <div class="elem"><img src="images/dom.jpg" alt=""></div>
+      </div>
+    </div>
+    <footer class="white"> </footer>
+  </section>
+  <section class="review"><a name="reviews"></a>
+    <div class="container">
+      <h2>профессиональный и вежливый отдел продаж подробно расскажет о квартирах</h2>
+      <div class="review_block">
+        <div class="elem">
+          <div class="header"><img src="images/sales.jpg" alt=""></div>
+          <div class="name">Владимир Поспелков</div>
+          <div class="status">директор отдела продаж</div>
+          <p>Рады предложить доступные квартиры для комфортной жизни в перспективном районе с развитой и привлекательной инфраструктурой. Обязательно обращаетесь и я расскажу о выгодных ценах и как можно сэкономить при выплате кредита.</p>
+          <div class="adress">Караганда <br> ул. Приканальная и проспект Строителей <br> +7 (7172)980-250 <br> Режим работы: <br> Пн.-Пт. с 09:00 до 18:30 <br> Обед с 12:30 до 14:00</div>
+        </div>
+        <div class="elem">
+          <div class="header"><img src="images/manager.jpg" alt=""></div>
+          <div class="name">Дамир Токтамысов</div>
+          <div class="status">менеджер по продажам</div>
+          <p>С удовольствием помогу выбрать оптимальную квартиру, с учетом особенностей вашей семьи и ваших планов. Обязательно звоните и я расскажу вам важные детали в выборе квартиры.</p>
+          <div class="adress">Караганда <br> ул. Приканальная и проспект Строителей <br> +7 (7172)980-250 <br> Режим работы: <br> Пн.-Пт. с 09:00 до 18:30 <br> Обед с 12:30 до 14:00</div>
+        </div>
+      </div>
+    </div>
+    <footer class="blue"></footer>
+  </section>
+  <section class="balls"><a name="prices"></a>
+    <header>развитие и приятный отдых для детей</header>
+    <div class="container">
+      <div class="flexslider">
+        <ul class="slides">
+          <li><img src="images/slide1_1.jpg"></li>
+          <li><img src="images/slide1_1.jpg"></li>
+        </ul>
+      </div>
+    </div>
+    <footer class="white"></footer>
+    <div class="info">
+      <div class="container"><span>как правильно выбрать квартиру <a href="images/house_1.jpg">скачать обзор</a></span><span>экскурсия по комплексу <a href="images/house_1.jpg">видео</a></span></div>
+    </div>
+  </section>
+  <section class="sales"><a name="sales"></a>
+    <header>трёхкомнатные квартиры по цене двухкомнатных</header>
+    <div class="container">
+      <div class="flexslider">
+        <ul class="slides">
+          <li><img src="images/house_1.jpg"></li>
+          <li><img src="images/house_1.jpg"></li>
+        </ul>
+      </div>
+    </div>
+    <footer class="white"></footer>
+    <div class="info">
+      <div class="container"><span>как правильно выбрать квартиру <a href="images/house_1.jpg">скачать обзор</a></span><span>экскурсия по комплексу <a href="images/house_1.jpg">видео</a></span>
+        <!--
+        div.main
+          h3="Внимание"
+          p="Оставьте ваши контактные данные и наш консультант<br/>свяжется с вами в течении 30 секунд"
+          form#application(action="mail.php" method="POST" name="application")
+            input#applicationName(name="name" maxlength="20" placeholder="Введите ваше имя" required)
+            input#applicationEmail(name="email" type="email" maxlength="20" placeholder="Ваш E-mail" required)
+            input#applicationTelephone(name="telephone" type="Tel" maxlength="20" placeholder="Ваш телефон")
+            input(type="submit")
+            div#app="Отправить"
+        -->
+        <div id="mail" class="not_visible_mail"></div>
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+        <script src="libs/fancybox/source/jquery.fancybox.pack.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.6.1/jquery.flexslider-min.js"></script>
+        <script src="bundle.js"></script>
+      </div>
+    </div>
   </section>
 </html>

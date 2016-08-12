@@ -1,0 +1,61 @@
+.sales {
+  background: url('images/green.jpg') no-repeat;
+  background-size: cover;
+
+  header {
+    background: rgba(#508D41, .7);
+    color: #FFF;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 30px;
+    padding-top: 35px;
+    padding-bottom: 50px;
+    margin-bottom: 25px;
+  }
+
+  .flexslider {
+    border: 0;
+  }
+
+  .flex-direction-nav a, .flex-direction-nav a:before {
+    color: #E5AE2A;
+
+    @media screen and (min-width: 1px) {
+      display: none;
+    }
+
+    @media screen and (min-width: 800px) {
+      display: block;
+    }
+  }
+
+  .flex-control-paging li a {
+    background: #E5AE2A;
+    border: 5px solid #FFF;
+
+    &.flex-active {
+      background: #FFF;
+      border: 5px solid #E5AE2A;
+    }
+  }
+
+  .info {
+    background: #FFF;
+    padding-top: 15px;
+    padding-bottom: 20px;
+
+    span {
+      text-align: center;
+
+      @media screen and (min-width: 1px) {
+        @include span(12);
+        padding-bottom: 15px;
+      }
+
+      @media screen and (min-width: 800px) {
+        @include span(6);
+        padding-bottom: 0;
+      }
+    }
+  }
+}

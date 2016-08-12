@@ -26,7 +26,7 @@ import FloatMenu from './floatMenu.js';
 //  function  test() {
 // 	console.log('test!');
 // }
-//         $("img, a").on("dragstart", function (event) { event.preventDefault(); });
+//
 //   });
 
 //Плавающее меню
@@ -58,3 +58,17 @@ let data = {
 };
 
 //new SendFunc('application', data, 'mail');
+
+$(window).load(function() {
+
+  $('.flexslider').flexslider({
+    animation: "slide",
+  });
+
+  $("img, a").on("dragstart", function (event) { event.preventDefault(); });
+
+  $(document).on('click', 'a.anchor', function () {
+       $('html, body').animate({ scrollTop:  $('a[name="'+this.hash.slice(1)+'"]').offset().top - 148 }, 1000 );
+       return false;
+   });
+});

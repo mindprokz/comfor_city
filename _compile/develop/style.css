@@ -714,3 +714,216 @@ nav {
   background: #FFFFFF; }
   .size .table_wrap {
     overflow-x: auto; }
+
+.success {
+  background: #E4F3FA; }
+  .success h2 {
+    color: #DB9023;
+    font-weight: 300;
+    font-size: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 40px; }
+  .success p {
+    color: #595857;
+    text-align: left;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    font-size: 18px; }
+  .success li {
+    line-height: 20px;
+    padding-top: 5px;
+    position: relative;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #595857; }
+    .success li:after {
+      content: ".";
+      display: block;
+      height: 0;
+      clear: both;
+      visibility: hidden; }
+    .success li:before {
+      content: '●';
+      color: #E5AE2A;
+      padding-right: 10px;
+      float: left;
+      padding-bottom: 2%;
+      width: 3%;
+      box-sizing: border-box; }
+    .success li span {
+      float: left;
+      width: 97%; }
+  .success .company {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0; }
+    .success .company .elem {
+      position: relative;
+      overflow: hidden; }
+      @media all and (min-width: 1px) {
+        .success .company .elem {
+          width: 100%;
+          float: left;
+          margin-left: 0;
+          margin-right: 0; } }
+      @media all and (min-width: 800px) {
+        .success .company .elem {
+          width: 31.42857%;
+          float: left; } }
+      .success .company .elem img {
+        width: 100%; }
+
+.review h2 {
+  color: #DB9023;
+  font-weight: 300;
+  font-size: 30px;
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 25px;
+  padding-bottom: 40px; }
+
+.review .review_block .elem {
+  box-sizing: border-box; }
+  @media all and (min-width: 1px) {
+    .review .review_block .elem {
+      width: 100%;
+      float: left;
+      margin-left: 0;
+      margin-right: 0;
+      text-align: center; } }
+  @media all and (min-width: 800px) {
+    .review .review_block .elem {
+      width: 48.57143%;
+      float: left;
+      text-align: left; } }
+  .review .review_block .elem .header {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-sizing: border-box;
+    border: 2px solid #E5AE2A;
+    position: relative; }
+    @media all and (min-width: 1px) {
+      .review .review_block .elem .header {
+        margin: auto; } }
+    @media all and (min-width: 800px) {
+      .review .review_block .elem .header {
+        margin: 0; } }
+    .review .review_block .elem .header img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 110%; }
+  .review .review_block .elem .name {
+    color: #5B9BD5;
+    font-size: 19px;
+    padding-bottom: 10px;
+    padding-top: 10px; }
+  .review .review_block .elem .status {
+    color: #595857;
+    text-transform: uppercase;
+    font-size: 16px;
+    padding-bottom: 20px; }
+  .review .review_block .elem p, .review .review_block .elem .adress {
+    color: #595857;
+    font-size: 15px;
+    padding-bottom: 15px; }
+
+.balls {
+  background: url("images/balls.jpg") no-repeat;
+  background-size: cover; }
+  .balls header {
+    background: rgba(89, 155, 157, 0.7);
+    color: #FFF;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 30px;
+    padding-top: 35px;
+    padding-bottom: 50px;
+    margin-bottom: 25px; }
+  .balls .flexslider {
+    border: 0; }
+  .balls .flex-direction-nav a, .balls .flex-direction-nav a:before {
+    color: #E5AE2A; }
+    @media screen and (min-width: 1px) {
+      .balls .flex-direction-nav a, .balls .flex-direction-nav a:before {
+        display: none; } }
+    @media screen and (min-width: 800px) {
+      .balls .flex-direction-nav a, .balls .flex-direction-nav a:before {
+        display: block; } }
+  .balls .flex-control-paging li a {
+    background: #E5AE2A;
+    border: 5px solid #FFF; }
+    .balls .flex-control-paging li a.flex-active {
+      background: #FFF;
+      border: 5px solid #E5AE2A; }
+  .balls .info {
+    background: #FFF;
+    padding-top: 15px;
+    padding-bottom: 20px; }
+    .balls .info span {
+      text-align: center; }
+      @media screen and (min-width: 1px) {
+        .balls .info span {
+          width: 100%;
+          float: left;
+          margin-left: 0;
+          margin-right: 0;
+          padding-bottom: 15px; } }
+      @media screen and (min-width: 800px) {
+        .balls .info span {
+          width: 48.57143%;
+          float: left;
+          padding-bottom: 0; } }
+
+.sales {
+  background: url("images/green.jpg") no-repeat;
+  background-size: cover; }
+  .sales header {
+    background: rgba(80, 141, 65, 0.7);
+    color: #FFF;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 30px;
+    padding-top: 35px;
+    padding-bottom: 50px;
+    margin-bottom: 25px; }
+  .sales .flexslider {
+    border: 0; }
+  .sales .flex-direction-nav a, .sales .flex-direction-nav a:before {
+    color: #E5AE2A; }
+    @media screen and (min-width: 1px) {
+      .sales .flex-direction-nav a, .sales .flex-direction-nav a:before {
+        display: none; } }
+    @media screen and (min-width: 800px) {
+      .sales .flex-direction-nav a, .sales .flex-direction-nav a:before {
+        display: block; } }
+  .sales .flex-control-paging li a {
+    background: #E5AE2A;
+    border: 5px solid #FFF; }
+    .sales .flex-control-paging li a.flex-active {
+      background: #FFF;
+      border: 5px solid #E5AE2A; }
+  .sales .info {
+    background: #FFF;
+    padding-top: 15px;
+    padding-bottom: 20px; }
+    .sales .info span {
+      text-align: center; }
+      @media screen and (min-width: 1px) {
+        .sales .info span {
+          width: 100%;
+          float: left;
+          margin-left: 0;
+          margin-right: 0;
+          padding-bottom: 15px; } }
+      @media screen and (min-width: 800px) {
+        .sales .info span {
+          width: 48.57143%;
+          float: left;
+          padding-bottom: 0; } }
