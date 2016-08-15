@@ -235,7 +235,7 @@
 
 	exports.default = function () {
 	  var tabs = [].concat(_toConsumableArray(document.querySelectorAll('.advice footer .button_bottom .text')));
-	  var info_blocks = [document.querySelector('.choose'), document.querySelector('.profit'), document.querySelector('.price'), document.querySelector('.size')];
+	  var info_blocks = [document.querySelector('.choose'), document.querySelector('.profit'), document.querySelector('.size'), document.querySelector('.price')];
 
 	  // Вешаем обработчики событий на табы
 	  tabs.forEach(function (tab, index) {

@@ -3,8 +3,8 @@ export default function() {
   var info_blocks = [
     document.querySelector('.choose'),
     document.querySelector('.profit'),
-    document.querySelector('.price'),
     document.querySelector('.size'),
+    document.querySelector('.price'),
   ];
 
   // Вешаем обработчики событий на табы
@@ -15,7 +15,7 @@ export default function() {
         this.classList.add('active');
 
         let active_elem = document.querySelector('.open_tab');
-        
+
         active_elem.classList.remove('open_tab');
         active_elem.classList.add('close_tab');
         info_blocks[index].classList.remove('close_tab');
