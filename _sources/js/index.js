@@ -1,41 +1,7 @@
 import SendFunc from './sendForm.js';
 import FloatMenu from './floatMenu.js';
-
-//   $(document).ready(function () {
-//     'use strict';
-// //Аякс отправка форм
-//     $("#application").submit(function () {
-//       var data = {
-//         name : document.querySelector('input[name="name"]').value,
-//         email : document.querySelector('input[name="email"]').value,
-//         telephone : document.querySelector('input[name="telephone"]').value
-//       };
-//       $.ajax({
-//         type: "POST",
-//         url: "mail.php",
-//         data: data
-//       }).done(function (value) {
-//         $('#mail')[0].innerHTML = value;
-//         $('#mail').removeClass('not_visible_mail');
-//         setTimeout(function () {
-//           $("#form").trigger("reset");
-//         }, 1000);
-//       });
-//     return false;
-//     });
-//  function  test() {
-// 	console.log('test!');
-// }
-//
-//   });
-
-//Плавающее меню
-// new FloatMenu({
-//     elem : document.getElementById('navigation'),
-//     height : 200,
-//     first_class : 'menu_fixed_on_top',
-//     second_class : 'float_menu'
-//   }).init();
+import tabsInit from './tabs.js';
+import mapInit from './map.js';
 
 // Нажатие на бургер
 document.querySelector('.burger').addEventListener('click', () => {
@@ -44,7 +10,7 @@ document.querySelector('.burger').addEventListener('click', () => {
   menu.classList.remove('close_menu');
 });
 
-document.querySelector('.closer').addEventListener('click', () => {
+document.querySelector('.menu .closer').addEventListener('click', () => {
   let menu = document.querySelector('.menu');
   menu.classList.remove('open_menu');
   menu.classList.add('close_menu');
@@ -63,6 +29,7 @@ $(window).load(function() {
 
   $('.flexslider').flexslider({
     animation: "slide",
+    animationLoop: false,
   });
 
   $("img, a").on("dragstart", function (event) { event.preventDefault(); });
@@ -71,4 +38,16 @@ $(window).load(function() {
        $('html, body').animate({ scrollTop:  $('a[name="'+this.hash.slice(1)+'"]').offset().top - 148 }, 1000 );
        return false;
    });
+});
+
+mapInit();
+tabsInit();
+
+// События модального окна
+document.querySelector('nav .number-block .button-open-form').addEventListener('click', function () {
+  document.querySelector('.modal').classList.remove('close_modal');
+});
+
+document.querySelector('.modal .closer').addEventListener('click', function () {
+  document.querySelector('.modal').classList.add('close_modal');
 });

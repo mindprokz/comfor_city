@@ -54,43 +54,15 @@
 
 	var _floatMenu2 = _interopRequireDefault(_floatMenu);
 
+	var _tabs = __webpack_require__(3);
+
+	var _tabs2 = _interopRequireDefault(_tabs);
+
+	var _map = __webpack_require__(4);
+
+	var _map2 = _interopRequireDefault(_map);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	//   $(document).ready(function () {
-	//     'use strict';
-	// //Аякс отправка форм
-	//     $("#application").submit(function () {
-	//       var data = {
-	//         name : document.querySelector('input[name="name"]').value,
-	//         email : document.querySelector('input[name="email"]').value,
-	//         telephone : document.querySelector('input[name="telephone"]').value
-	//       };
-	//       $.ajax({
-	//         type: "POST",
-	//         url: "mail.php",
-	//         data: data
-	//       }).done(function (value) {
-	//         $('#mail')[0].innerHTML = value;
-	//         $('#mail').removeClass('not_visible_mail');
-	//         setTimeout(function () {
-	//           $("#form").trigger("reset");
-	//         }, 1000);
-	//       });
-	//     return false;
-	//     });
-	//  function  test() {
-	// 	console.log('test!');
-	// }
-	//
-	//   });
-
-	//Плавающее меню
-	// new FloatMenu({
-	//     elem : document.getElementById('navigation'),
-	//     height : 200,
-	//     first_class : 'menu_fixed_on_top',
-	//     second_class : 'float_menu'
-	//   }).init();
 
 	// Нажатие на бургер
 	document.querySelector('.burger').addEventListener('click', function () {
@@ -99,7 +71,7 @@
 	  menu.classList.remove('close_menu');
 	});
 
-	document.querySelector('.closer').addEventListener('click', function () {
+	document.querySelector('.menu .closer').addEventListener('click', function () {
 	  var menu = document.querySelector('.menu');
 	  menu.classList.remove('open_menu');
 	  menu.classList.add('close_menu');
@@ -117,7 +89,8 @@
 	$(window).load(function () {
 
 	  $('.flexslider').flexslider({
-	    animation: "slide"
+	    animation: "slide",
+	    animationLoop: false
 	  });
 
 	  $("img, a").on("dragstart", function (event) {
@@ -128,6 +101,18 @@
 	    $('html, body').animate({ scrollTop: $('a[name="' + this.hash.slice(1) + '"]').offset().top - 148 }, 1000);
 	    return false;
 	  });
+	});
+
+	(0, _map2.default)();
+	(0, _tabs2.default)();
+
+	// События модального окна
+	document.querySelector('nav .number-block .button-open-form').addEventListener('click', function () {
+	  document.querySelector('.modal').classList.remove('close_modal');
+	});
+
+	document.querySelector('.modal .closer').addEventListener('click', function () {
+	  document.querySelector('.modal').classList.add('close_modal');
 	});
 
 /***/ },
@@ -237,6 +222,158 @@
 	}();
 
 	exports.default = FloatMenu;
+
+/***/ },
+/* 3 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	exports.default = function () {
+	  var tabs = [].concat(_toConsumableArray(document.querySelectorAll('.advice footer .button_bottom .text')));
+	  var info_blocks = [document.querySelector('.choose'), document.querySelector('.profit'), document.querySelector('.price'), document.querySelector('.size')];
+
+	  // Вешаем обработчики событий на табы
+	  tabs.forEach(function (tab, index) {
+	    tab.addEventListener('click', function () {
+	      if (!this.classList.contains('active')) {
+	        document.querySelector('.advice footer .button_bottom .text.active').classList.remove('active');
+	        this.classList.add('active');
+
+	        var active_elem = document.querySelector('.open_tab');
+
+	        active_elem.classList.remove('open_tab');
+	        active_elem.classList.add('close_tab');
+	        info_blocks[index].classList.remove('close_tab');
+	        info_blocks[index].classList.add('open_tab');
+	      }
+	    });
+	  });
+	};
+
+	function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+
+	;
+
+/***/ },
+/* 4 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	exports.default = function () {
+	  initMap();
+	  window.application.map.markersObject = [];
+	  window.application.map.filterArr = ['shop', 'learn', 'relax', 'health'];
+
+	  var marker_1 = new CreateMarker([49.784862, 73.135996], 'images/markers/enbek.png', 'health', 'Спортивный клуб Енбек').add();
+	  window.application.map.markersObject.push(marker_1);
+
+	  var marker_2 = new CreateMarker([49.776823, 73.138847], 'images/markers/hyndai.png', 'shop', 'Центр авто hyndai').add();
+	  window.application.map.markersObject.push(marker_2);
+
+	  var marker_3 = new CreateMarker([49.778955, 73.127570], 'images/markers/akkniet.png', 'learn', 'Детский сад №23').add();
+	  window.application.map.markersObject.push(marker_3);
+
+	  var marker_4 = new CreateMarker([49.779375, 73.140489], 'images/markers/winPark.png', 'relax', 'Парк победы').add();
+	  window.application.map.markersObject.push(marker_4);
+	};
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+
+	function initMap() {
+	  window.application = {};
+	  window.application.map = {};
+	  window.application.map.markers = [];
+	  window.application.map.markersFilter = 'all';
+
+	  window.application.map.map = new google.maps.Map(document.querySelector('#map'), {
+	    center: { lat: 49.784215, lng: 73.137432 },
+	    zoom: 14,
+	    scrollwheel: false,
+	    disableDefaultUI: true
+	  });
+
+	  [].concat(_toConsumableArray(document.querySelectorAll('.map footer .button_bottom .text'))).forEach(function (item, index) {
+	    item.addEventListener('click', function () {
+	      if (window.application.map.markersFilter === 'all') {
+	        this.classList.add('active');
+	        window.application.map.markersFilter = window.application.map.filterArr[index];
+	        CreateMarker.clearAll();
+	        CreateMarker.addAll();
+	      } else if (this.classList.contains('active')) {
+	        this.classList.remove('active');
+	        window.application.map.markersFilter = 'all';
+	        CreateMarker.clearAll();
+	        CreateMarker.addAll();
+	      } else {
+	        document.querySelector('.button_bottom .text.active').classList.remove('active');
+	        this.classList.add('active');
+	        window.application.map.markersFilter = window.application.map.filterArr[index];
+	        CreateMarker.clearAll();
+	        CreateMarker.addAll();
+	      }
+	    });
+	  });
+	}
+
+	var CreateMarker = function () {
+	  function CreateMarker(coords, icon, filterAttr, title) {
+	    _classCallCheck(this, CreateMarker);
+
+	    this.title = title;
+	    this.coords = coords;
+	    this.icon = icon;
+	    this.filterAttr = filterAttr;
+	  }
+
+	  _createClass(CreateMarker, [{
+	    key: 'add',
+	    value: function add() {
+	      var marker = new google.maps.Marker({
+	        position: new google.maps.LatLng(this.coords[0], this.coords[1]),
+	        title: this.title,
+	        icon: this.icon
+	      });
+
+	      if (this.filterAttr === window.application.map.markersFilter || window.application.map.markersFilter === 'all') {
+	        marker.setMap(window.application.map.map);
+	        window.application.map.markers.push(marker);
+	      }
+
+	      return this;
+	    }
+	  }], [{
+	    key: 'addAll',
+	    value: function addAll() {
+	      window.application.map.markersObject.forEach(function (item) {
+	        item.add();
+	      });
+	    }
+	  }, {
+	    key: 'clearAll',
+	    value: function clearAll() {
+	      window.application.map.markers.forEach(function (item) {
+	        item.setMap(null);
+	      });
+	      window.application.map.markers.length = 0;
+	    }
+	  }]);
+
+	  return CreateMarker;
+	}();
 
 /***/ }
 /******/ ]);

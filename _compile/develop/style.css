@@ -116,6 +116,11 @@ footer.white {
     footer.white {
       margin-top: 60px; } }
 
+footer.slider_footer {
+  margin-top: 0;
+  opacity: .99;
+  margin-top: -67px; }
+
 header {
   background: rgba(255, 255, 255, 0.8); }
   @media screen and (min-width: 1px) {
@@ -146,6 +151,12 @@ header {
     @media screen and (min-width: 600px) {
       header p {
         width: 600px; } }
+
+.open_tab {
+  display: block; }
+
+.close_tab {
+  display: none; }
 
 nav {
   position: fixed;
@@ -280,17 +291,88 @@ nav {
         color: #D67F23;
         font-size: 16px; }
 
+.balls {
+  background-size: cover;
+  overflow: hidden; }
+  @media screen and (min-width: 1px) {
+    .balls {
+      padding-top: 84px; } }
+  @media screen and (min-width: 800px) {
+    .balls {
+      padding-top: 164px; } }
+  .balls header {
+    background: rgba(89, 155, 157, 0.7);
+    color: #FFF;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 30px;
+    padding-top: 35px;
+    padding-bottom: 50px;
+    margin-bottom: 25px; }
+  .balls .flexslider {
+    border: 0;
+    margin-bottom: 0; }
+  .balls .flex-direction-nav a, .balls .flex-direction-nav a:before {
+    color: #E5AE2A; }
+    @media screen and (min-width: 1px) {
+      .balls .flex-direction-nav a, .balls .flex-direction-nav a:before {
+        display: none; } }
+    @media screen and (min-width: 800px) {
+      .balls .flex-direction-nav a, .balls .flex-direction-nav a:before {
+        display: block; } }
+  @media screen and (min-width: 1px) {
+    .balls .slides li {
+      height: 585px; } }
+  @media screen and (min-width: 800px) {
+    .balls .slides li {
+      height: 750px; } }
+  .balls .slides li .container {
+    text-align: center; }
+    .balls .slides li .container img {
+      max-height: 450px;
+      width: auto;
+      display: inline; }
+      @media screen and (min-width: 1px) {
+        .balls .slides li .container img {
+          width: 95%; } }
+      @media screen and (min-width: 800px) {
+        .balls .slides li .container img {
+          width: auto; } }
+  .balls .flex-control-paging li a {
+    background: #E5AE2A;
+    border: 5px solid #FFF; }
+    .balls .flex-control-paging li a.flex-active {
+      background: #FFF;
+      border: 5px solid #E5AE2A; }
+  .balls .background_slide {
+    padding-bottom: 150px;
+    height: 100%; }
+  .balls .flex-control-nav {
+    bottom: 70px; }
+  .balls .info {
+    background: #FFF;
+    padding-top: 15px;
+    padding-bottom: 20px; }
+    .balls .info span {
+      text-align: center; }
+      @media screen and (min-width: 1px) {
+        .balls .info span {
+          width: 100%;
+          float: left;
+          margin-left: 0;
+          margin-right: 0;
+          padding-bottom: 15px; } }
+      @media screen and (min-width: 800px) {
+        .balls .info span {
+          width: 48.57143%;
+          float: left;
+          padding-bottom: 0; } }
+
 .main {
   text-align: center;
   background: #fff;
   padding-bottom: 25px;
   box-sizing: border-box; }
-  @media screen and (min-width: 1px) {
-    .main {
-      padding-top: 120px; } }
-  @media screen and (min-width: 800px) {
-    .main {
-      padding-top: 200px; } }
   .main h3 {
     font-size: 19px;
     color: #595857;
@@ -338,15 +420,24 @@ nav {
       height: 25px; }
 
 .map {
-  background: url("images/map.jpg") no-repeat;
-  background-size: cover;
   position: relative; }
   @media screen and (min-width: 1px) {
     .map {
-      height: auto; } }
+      height: 600px; } }
   @media screen and (min-width: 800px) {
     .map {
       height: 850px; } }
+  .map .wrap_map {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%; }
+  .map #map {
+    height: 100%; }
+  .map .content_wrap {
+    position: absolute;
+    width: 100%;
+    height: 200px; }
   .map footer {
     position: absolute;
     bottom: 0;
@@ -375,8 +466,7 @@ nav {
           background: #EFEFEF; }
         .map footer .button_bottom .text.active {
           background: #5B9BD5;
-          color: #FFFFFF;
-          cursor: default; }
+          color: #FFFFFF; }
 
 .building {
   background: #E4F3FA; }
@@ -570,10 +660,15 @@ nav {
       box-sizing: border-box;
       padding-top: 25px;
       cursor: pointer;
+      color: #000;
       transition: backgroun,color .3s, .3s, ease,ease; }
-      .advice footer .button_bottom .text:hover {
+      .advice footer .button_bottom .text.active {
         background: #DB9023;
         color: #FFFFFF; }
+        .advice footer .button_bottom .text.active:hover {
+          background: #DB9023; }
+      .advice footer .button_bottom .text:hover {
+        background: #EFEEEE; }
 
 .choose {
   background: #E4F3FA; }
@@ -802,7 +897,6 @@ nav {
   .review .review_block .elem .header {
     width: 200px;
     height: 200px;
-    border-radius: 50%;
     overflow: hidden;
     box-sizing: border-box;
     border: 2px solid #E5AE2A;
@@ -834,96 +928,63 @@ nav {
     font-size: 15px;
     padding-bottom: 15px; }
 
-.balls {
-  background: url("images/balls.jpg") no-repeat;
-  background-size: cover; }
-  .balls header {
-    background: rgba(89, 155, 157, 0.7);
-    color: #FFF;
-    text-transform: uppercase;
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 15;
+  width: 100%;
+  height: 100%;
+  background: rgba(219, 144, 35, 0.6); }
+  .modal.close_modal {
+    display: none; }
+  .modal .wrap {
+    position: relative;
+    height: 100%;
+    width: 100%; }
+  .modal h3 {
+    font-size: 25px;
     text-align: center;
-    font-size: 30px;
-    padding-top: 35px;
-    padding-bottom: 50px;
-    margin-bottom: 25px; }
-  .balls .flexslider {
-    border: 0; }
-  .balls .flex-direction-nav a, .balls .flex-direction-nav a:before {
-    color: #E5AE2A; }
-    @media screen and (min-width: 1px) {
-      .balls .flex-direction-nav a, .balls .flex-direction-nav a:before {
-        display: none; } }
-    @media screen and (min-width: 800px) {
-      .balls .flex-direction-nav a, .balls .flex-direction-nav a:before {
-        display: block; } }
-  .balls .flex-control-paging li a {
-    background: #E5AE2A;
-    border: 5px solid #FFF; }
-    .balls .flex-control-paging li a.flex-active {
-      background: #FFF;
-      border: 5px solid #E5AE2A; }
-  .balls .info {
-    background: #FFF;
-    padding-top: 15px;
-    padding-bottom: 20px; }
-    .balls .info span {
-      text-align: center; }
-      @media screen and (min-width: 1px) {
-        .balls .info span {
-          width: 100%;
-          float: left;
-          margin-left: 0;
-          margin-right: 0;
-          padding-bottom: 15px; } }
-      @media screen and (min-width: 800px) {
-        .balls .info span {
-          width: 48.57143%;
-          float: left;
-          padding-bottom: 0; } }
-
-.sales {
-  background: url("images/green.jpg") no-repeat;
-  background-size: cover; }
-  .sales header {
-    background: rgba(80, 141, 65, 0.7);
-    color: #FFF;
     text-transform: uppercase;
-    text-align: center;
-    font-size: 30px;
-    padding-top: 35px;
-    padding-bottom: 50px;
-    margin-bottom: 25px; }
-  .sales .flexslider {
-    border: 0; }
-  .sales .flex-direction-nav a, .sales .flex-direction-nav a:before {
-    color: #E5AE2A; }
-    @media screen and (min-width: 1px) {
-      .sales .flex-direction-nav a, .sales .flex-direction-nav a:before {
-        display: none; } }
-    @media screen and (min-width: 800px) {
-      .sales .flex-direction-nav a, .sales .flex-direction-nav a:before {
-        display: block; } }
-  .sales .flex-control-paging li a {
-    background: #E5AE2A;
-    border: 5px solid #FFF; }
-    .sales .flex-control-paging li a.flex-active {
-      background: #FFF;
-      border: 5px solid #E5AE2A; }
-  .sales .info {
+    padding-bottom: 15px;
+    padding-top: 25px; }
+  .modal .closer {
+    height: 17px;
+    width: 17px;
+    position: absolute;
+    right: -5px;
+    top: -5px;
+    background: url("images/sprite.png") no-repeat -136px 0px;
+    cursor: pointer; }
+  .modal .form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
     background: #FFF;
-    padding-top: 15px;
-    padding-bottom: 20px; }
-    .sales .info span {
-      text-align: center; }
-      @media screen and (min-width: 1px) {
-        .sales .info span {
-          width: 100%;
-          float: left;
-          margin-left: 0;
-          margin-right: 0;
-          padding-bottom: 15px; } }
-      @media screen and (min-width: 800px) {
-        .sales .info span {
-          width: 48.57143%;
-          float: left;
-          padding-bottom: 0; } }
+    padding: 20px; }
+    .modal .form input {
+      width: 80%;
+      box-sizing: border-box;
+      display: block;
+      margin: 10px auto;
+      padding: 15px 10px;
+      border: 2px solid #797979;
+      transition: border .3s ease; }
+      .modal .form input:focus {
+        outline: 0;
+        border: 2px solid #DB9023; }
+    .modal .form button {
+      width: 80%;
+      box-sizing: border-box;
+      display: block;
+      margin: 10px auto;
+      padding: 15px 10px;
+      background: #DB9023;
+      color: #FFF;
+      border: 0;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 20px;
+      cursor: pointer; }

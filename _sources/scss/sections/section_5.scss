@@ -52,11 +52,20 @@
         box-sizing: border-box;
         padding-top: 25px;
         cursor: pointer;
+        color: #000;
         transition: backgroun,color .3s, .3s, ease,ease;
 
-        &:hover {
+        &.active {
           background: #DB9023;
           color: #FFFFFF;
+
+          &:hover {
+            background: #DB9023;
+          }
+        }
+
+        &:hover {
+          background: #EFEEEE;
         }
       }
     }

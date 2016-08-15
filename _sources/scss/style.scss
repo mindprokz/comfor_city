@@ -51,6 +51,12 @@ footer.white {
   }
 }
 
+footer.slider_footer {
+  margin-top: 0;
+  opacity: .99;
+  margin-top: -67px;
+}
+
 header {
   background: rgba(255, 255, 255, 0.8);
 
@@ -91,11 +97,19 @@ header {
   }
 }
 
+.open_tab {
+  display: block;
+}
+
+.close_tab {
+  display: none;
+}
 
 @import
   'sections/navigation',
   'sections/section_1',
-  'sections/section_2',
+  'sections/section_2_1',
+  'sections/section_2_2',
   'sections/section_3',
   'sections/section_4',
   'sections/section_5',
@@ -105,5 +119,4 @@ header {
   'sections/section_9',
   'sections/section_10',
   'sections/section_11',
-  'sections/section_12',
-  'sections/section_13'
+  'sections/modal'
