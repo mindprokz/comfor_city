@@ -3,8 +3,8 @@ export default function() {
   var info_blocks = [
     document.querySelector('.choose'),
     document.querySelector('.profit'),
+    document.querySelector('.profit_2'),
     document.querySelector('.size'),
-    document.querySelector('.price'),
   ];
 
   // Вешаем обработчики событий на табы
