@@ -155,7 +155,10 @@ function initMap() {
     center: {lat: 49.784215, lng: 73.137432},
     zoom: 14,
     scrollwheel : false,
-    disableDefaultUI: true
+    zoomControl: true,
+    zoomControlOptions: {
+        position: google.maps.ControlPosition.RIGHT_CENTER
+    },
   });
 
   [...document.querySelectorAll('.map footer .button_bottom .text')].forEach( (item, index) => {

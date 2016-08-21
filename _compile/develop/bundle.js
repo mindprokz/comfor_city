@@ -62,6 +62,10 @@
 
 	var _map2 = _interopRequireDefault(_map);
 
+	var _plans = __webpack_require__(5);
+
+	var _plans2 = _interopRequireDefault(_plans);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	// Нажатие на бургер
@@ -105,6 +109,7 @@
 
 	(0, _map2.default)();
 	(0, _tabs2.default)();
+	(0, _plans2.default)();
 
 	// События модального окна
 	document.querySelector('nav .number-block .button-open-form').addEventListener('click', function () {
@@ -355,7 +360,10 @@
 	    center: { lat: 49.784215, lng: 73.137432 },
 	    zoom: 14,
 	    scrollwheel: false,
-	    disableDefaultUI: true
+	    zoomControl: true,
+	    zoomControlOptions: {
+	      position: google.maps.ControlPosition.RIGHT_CENTER
+	    }
 	  });
 
 	  [].concat(_toConsumableArray(document.querySelectorAll('.map footer .button_bottom .text'))).forEach(function (item, index) {
@@ -425,6 +433,39 @@
 
 	  return CreateMarker;
 	}();
+
+/***/ },
+/* 5 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	exports.default = function () {
+
+	  // closer for plan_a
+	  document.querySelector('.plan_A .closer').addEventListener('click', function () {
+	    document.querySelector('.plan_A').classList.add('close');
+	  });
+
+	  // opener for plan_a
+	  document.querySelector('.first_front').addEventListener('click', function () {
+	    document.querySelector('.plan_A').classList.remove('close');
+	  });
+
+	  // closer for plan_b
+	  document.querySelector('.plan_B .closer').addEventListener('click', function () {
+	    document.querySelector('.plan_B').classList.add('close');
+	  });
+
+	  // opener for plan_b
+	  document.querySelector('.second_front').addEventListener('click', function () {
+	    document.querySelector('.plan_B').classList.remove('close');
+	  });
+	};
 
 /***/ }
 /******/ ]);

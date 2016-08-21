@@ -2,6 +2,7 @@ import SendFunc from './sendForm.js';
 import FloatMenu from './floatMenu.js';
 import tabsInit from './tabs.js';
 import mapInit from './map.js';
+import plansInit from './plans.js';
 
 // Нажатие на бургер
 document.querySelector('.burger').addEventListener('click', () => {
@@ -42,6 +43,7 @@ $(window).load(function() {
 
 mapInit();
 tabsInit();
+plansInit();
 
 // События модального окна
 document.querySelector('nav .number-block .button-open-form').addEventListener('click', function () {

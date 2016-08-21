@@ -185,6 +185,7 @@ gulp.task('watch', () => {
   // Ватчеры для .jade файлов
 	gulp.watch(jadePath.from, ['jade']);
   gulp.watch(__dirname + '/_sources/jade/sections/*.jade', ['jade']);
+  gulp.watch(__dirname + '/_sources/jade/svg/*.jade', ['jade']);
 
   // Ватчеры для .scss файлов
   gulp.watch(scssPath.from, ['scss']);

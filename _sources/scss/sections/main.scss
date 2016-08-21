@@ -1,0 +1,147 @@
+.balls {
+  background-size: cover;
+  overflow: hidden;
+
+  @media screen and (min-width: 1px) {
+    padding-top: 84px;
+  }
+
+  @media screen and (min-width: 800px) {
+    padding-top: 164px;
+  }
+
+  header {
+    background: rgba(#599b9d, 0.7);
+    color: #fff;
+    text-transform: lowercase;
+    text-align: center;
+    font-size: 30px;
+    padding-top: 35px;
+    padding-bottom: 40px;
+    margin-bottom: 25px;
+  }
+
+  .flexslider {
+    border: 0;
+    margin-bottom: 0;
+  }
+
+  .flex-direction-nav a,
+  .flex-direction-nav a::before {
+    color: #e5ae2a;
+
+    @media screen and (min-width: 1px) {
+      display: none;
+    }
+
+    @media screen and (min-width: 800px) {
+      display: block;
+    }
+  }
+
+  .slides li {
+    @media screen and (min-width: 1px) {
+      height: 585px;
+    }
+
+    @media screen and (min-width: 800px) {
+      height: 750px;
+    }
+
+    .container {
+      text-align: center;
+
+      img {
+        display: inline;
+        max-height: 300px;
+
+        &.first {
+          transform: translateY(25%);
+
+          @media screen and (min-width: 1px) {
+            width: 95%;
+          }
+
+          @media screen and (min-width: 800px) {
+            width: 70%;
+          }
+        }
+
+        &.second {
+          @media screen and (min-width: 1px) {
+            @include span(8);
+
+            margin-left: span(2);
+            transform: translateY(0);
+          }
+
+          @media screen and (min-width: 800px) {
+            @include span(6);
+
+            padding-right: 25px;
+            box-sizing: border-box;
+            margin-left: 0;
+            transform: translateY(25%);
+          }
+        }
+
+        &.third {
+          @media screen and (min-width: 1px) {
+            @include span(8);
+
+            margin-left: span(2);
+            transform: translateY(0);
+          }
+
+          @media screen and (min-width: 800px) {
+            @include span(6);
+
+            margin-left: 0;
+            transform: translateY(25%);
+          }
+        }
+      }
+    }
+  }
+
+  .flex-control-paging li a {
+    background: #e5ae2a;
+    border: 5px solid #fff;
+
+    &.flex-active {
+      background: #fff;
+      border: 5px solid #e5ae2a;
+    }
+  }
+
+  .background_slide {
+    padding-bottom: 150px;
+    height: 100%;
+  }
+
+  .flex-control-nav {
+    bottom: 70px;
+  }
+
+  .info {
+    background: #fff;
+    padding-top: 15px;
+    padding-bottom: 20px;
+
+    span {
+      text-align: center;
+
+      @media screen and (min-width: 1px) {
+        @include span(12);
+
+        padding-bottom: 15px;
+      }
+
+      @media screen and (min-width: 800px) {
+        @include span(6);
+
+        padding-bottom: 0;
+      }
+    }
+  }
+}

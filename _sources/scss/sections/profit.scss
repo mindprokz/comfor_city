@@ -1,0 +1,77 @@
+.profit {
+  background: #FDFDFD;
+    h2 {
+      color: #DB9023;
+      font-weight: 300;
+      font-size: 30px;
+      text-transform: lowercase;
+      text-align: center;
+      padding-top: 25px;
+      padding-bottom: 40px;
+    }
+
+    .half {
+      @include span(6);
+      box-sizing: border-box;
+      text-align: left;
+
+      @media screen and (min-width: 1px) {
+        @include span(12);
+        padding-left: 20px;
+        padding-right: 20px;
+
+        &.second {
+          padding-left: 20px;
+        }
+      }
+
+      @media screen and (min-width: 800px) {
+        @include span(6);
+        padding-left: 0px;
+        padding-right: 0px;
+
+        &.second {
+          padding-left: 40px;
+        }
+      }
+    }
+
+    li {
+      line-height: 20px;
+      font-size: 15px;
+      padding-top: 15px;
+      position: relative;
+      padding-left: 20px;
+      padding-right: 20px;
+      color: #595857;
+
+      &:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+      }
+
+      &:before {
+        content: '●';
+        color: #E5AE2A;
+        padding-right: 10px;
+        float: left;
+        padding-bottom: 2%;
+        width: 3%;
+        box-sizing: border-box;
+      }
+
+      span {
+        float: left;
+        width: 97%;
+      }
+    }
+
+
+    b {
+      color: #E5AE2A;
+      font-weight: 700;
+    }
+}

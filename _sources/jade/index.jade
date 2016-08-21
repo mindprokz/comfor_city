@@ -3,33 +3,23 @@ html(lang!="ru")
   head
     include sections/header.jade
   body
-  
-  include sections/navigation.jade
-  include sections/section_1.jade
-  include sections/section_2_1.jade
-  include sections/section_2_2.jade
-  include sections/section_3.jade
-  include sections/section_4.jade
-  include sections/section_5.jade 
-  include sections/section_6.jade 
-  include sections/section_7.jade 
-  include sections/section_8.jade 
-  include sections/section_9.jade 
-  include sections/section_10.jade
-  include sections/section_11.jade
-  include sections/section_12.jade
-  include sections/modal.jade
-    //- example form
-    //
-      div.main
-        h3="Внимание"
-        p="Оставьте ваши контактные данные и наш консультант<br/>свяжется с вами в течении 30 секунд"
-        form#application(action="mail.php" method="POST" name="application")
-          input#applicationName(name="name" maxlength="20" placeholder="Введите ваше имя" required)
-          input#applicationEmail(name="email" type="email" maxlength="20" placeholder="Ваш E-mail" required)
-          input#applicationTelephone(name="telephone" type="Tel" maxlength="20" placeholder="Ваш телефон")
-          input(type="submit")
-          div#app="Отправить"
+    include sections/navigation.jade
+    include sections/main.jade
+    include sections/map.jade
+    include sections/house.jade
+    include sections/building.jade
+    //include sections/report.jade
+    include sections/plans.jade
+    include sections/advice.jade 
+    include sections/choose.jade 
+    include sections/profit.jade 
+    include sections/profit_2.jade 
+    include sections/size.jade 
+    include sections/success.jade
+    include sections/flat_price.jade
+    include sections/review.jade
+    include sections/modal.jade
+    
     div#mail.not_visible_mail
 
     include sections/footer.jade  

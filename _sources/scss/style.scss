@@ -17,11 +17,11 @@ body {
   font-family: Roboto, sans-serif;
 }
 
-.container-float{
+.container-float {
   @include container($container-float);
 }
 
-.container{
+.container {
   @include container($container);
 }
 
@@ -53,7 +53,7 @@ footer.white {
 
 footer.slider_footer {
   margin-top: 0;
-  opacity: .99;
+  opacity: 0.99;
   margin-top: -67px;
 }
 
@@ -73,8 +73,8 @@ header {
   }
 
   h3 {
-    color: #DB9023;
-    text-transform: uppercase;
+    color: #db9023;
+    text-transform: lowercase;
     font-weight: 300;
     text-align: center;
     font-size: 25px;
@@ -107,16 +107,17 @@ header {
 
 @import
   'sections/navigation',
-  'sections/section_1',
-  'sections/section_2_1',
-  'sections/section_2_2',
-  'sections/section_3',
-  'sections/section_4',
-  'sections/section_5',
-  'sections/section_6',
-  'sections/section_7',
-  'sections/section_8',
-  'sections/section_9',
-  'sections/section_10',
-  'sections/section_11',
+  'sections/main',
+  'sections/map',
+  'sections/building',
+  'sections/advice',
+  'sections/house',
+  'sections/choose',
+  'sections/plans',
+  'sections/profit',
+  'sections/report',
+  'sections/review',
+  'sections/size',
+  'sections/success',
+  'sections/table',
   'sections/modal'
