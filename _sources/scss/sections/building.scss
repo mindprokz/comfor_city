@@ -1,12 +1,12 @@
 .building {
-  background: #E4F3FA;
+  background: #e4f3fa;
+  padding-top: 40px;
 
-  @media screen and (min-width: 1px) {
-    padding-top: 20px;
-  }
-
-  @media screen and (min-width: 800px) {
-    padding-top: 100px;
+  h3 {
+    font-size: 30px;
+    padding-bottom: 50px;
+    text-align: center;
+    color: #e5ae2a;
   }
 
   .wrap {
@@ -18,8 +18,9 @@
     }
 
     @media screen and (min-width: 800px) {
-      display: block;
       @include span(6);
+
+      display: block;
     }
   }
 
@@ -28,7 +29,7 @@
     overflow: hidden;
     border-radius: 5px;
 
-    &:before {
+    &::before {
       content: "";
       padding-top: 100%;
       float: left;
@@ -44,7 +45,6 @@
   }
 
   .info {
-
     @media screen and (min-width: 1px) {
       @include span(12);
     }
@@ -53,36 +53,53 @@
       @include span(6);
     }
 
-    h3 {
-      font-size: 27px;
-      text-align: center;
-      text-transform: lowercase;
-      font-weight: 300;
-      color: #DB9023;
-      padding-top: 25px;
-    }
+    ul {
+      @include span(12);
 
-    h4 {
-      font-size: 19px;
-      color: #595857;
-      padding-top: 20px;
-      text-align: center;
-      padding-bottom: 40px;
+      margin-bottom: 50px;
+      margin-top: 40px;
+
+      li {
+        line-height: 20px;
+        padding-top: 5px;
+
+        &::after {
+          content: ".";
+          display: block;
+          height: 0;
+          clear: both;
+          visibility: hidden;
+        }
+
+        &::before {
+          content: '●';
+          color: #e5ae2a;
+          padding-right: 10px;
+          float: left;
+          height: 25px;
+        }
+      }
+
+      b {
+        color: #e5ae2a;
+        font-weight: 700;
+      }
     }
 
     .reg {
-
       .reg_elem {
         box-sizing: border-box;
 
         @media screen and (min-width: 1px) {
-          padding: 20px 20px;
           @include span(12);
+
+          padding: 20px;
         }
 
         @media screen and (min-width: 800px) {
-          padding: 0 20px;
           @include span(4);
+
+          padding: 0 20px;
         }
 
         .icon {
@@ -91,7 +108,7 @@
           border-radius: 50%;
           margin-bottom: 40px;
 
-          &:before {
+          &::before {
             content: "";
             padding-top: 100%;
             float: left;

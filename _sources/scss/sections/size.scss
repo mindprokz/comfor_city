@@ -1,7 +1,62 @@
 .size {
   background: #fff;
 
+  .container { position: relative; }
+
   .table_wrap {
     overflow-x: auto;
+    width: 100%;
+  }
+
+  h4 {
+    color: #595857;
+    font-size: 18px;
+    padding-bottom: 10px;
+  }
+
+  ul {
+    @include span(12);
+
+    box-sizing: border-box;
+    text-align: left;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 20px;
+  }
+
+  li {
+    line-height: 20px;
+    padding-top: 5px;
+    color: #595857;
+
+    &::after {
+      content: ".";
+      display: block;
+      height: 0;
+      clear: both;
+      visibility: hidden;
+    }
+
+    &::before {
+      content: '●';
+      color: #e5ae2a;
+      padding-right: 10px;
+      float: left;
+      height: 25px;
+    }
+  }
+
+  .price {
+    position: absolute;
+    top: 20px;
+    right: 0;
+
+    @media (min-width: 1px) {
+      display: none;
+    }
+
+    @media (min-width: 800px) {
+      display: block;
+    }
   }
 }

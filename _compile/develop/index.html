@@ -30,12 +30,12 @@
         <footer>
           <div class="menu close_menu">
             <div class="closer"></div><a href="#house" class="anchor">Район</a><a href="#prices" class="anchor">Дом</a><a href="#reliability" class="anchor">Надежность</a>
-            <!--a(href="#building" class="anchor")="Строительство"--><a href="#flats" class="anchor">Квартиры</a><a href="#newpeople" class="anchor">Новосёлам</a><a href="#officces" class="anchor">Офисы</a><a href="#developers" class="anchor">Девелопер</a><a href="#reviews" class="anchor">Отзывы</a><a href="#flat_price" class="anchor">Цены и скидки</a><a href="#sales" class="anchor">Продажи</a>
+            <!--a(href="#building" class="anchor")="Строительство"--><a href="#flats" class="anchor">Квартиры</a><a href="#newpeople" class="anchor">Новосёлам</a><a href="#officces" class="anchor">Офисы</a><a href="#developers" class="anchor">Девелопер</a><a href="#reviews" class="anchor">Отзывы</a><a href="#size" class="anchor">Цены и скидки</a><a href="#sales" class="anchor">Продажи</a>
           </div>
         </footer>
       </div>
-    </nav>
-    <section class="balls"><a name="position"></a>
+    </nav><a name="position"></a>
+    <section class="balls">
       <div class="flexslider">
         <ul class="slides">
           <li>
@@ -56,8 +56,8 @@
       <div class="info">
         <div class="container"><span>как правильно выбрать квартиру <a href="images/house_1.jpg">скачать обзор</a></span><span>экскурсия по комплексу <a href="images/house_1.jpg">видео</a></span></div>
       </div>
-    </section>
-    <section class="map"><a name="house"></a>
+    </section><a name="house"></a>
+    <section class="map">
       <div class="wrap_map">
         <div id="map"></div>
       </div>
@@ -91,8 +91,8 @@
           </div>
         </div>
       </footer>
-    </section>
-    <section class="main"><a name="prices"></a>
+    </section><a name="prices"></a>
+    <section class="main">
       <div class="container"><img src="images/logo.png">
         <h3>вы будете уверены в том, что обеспечиваете себя и свою семью максимально безопасным, <br> удобным и комфортным жильем по самым привлекательным ценам</h3>
         <ul class="half">
@@ -114,15 +114,18 @@
         </ul>
       </div>
       <footer class="blue"></footer>
-    </section>
-    <section class="building"><a name="reliability"></a>
+    </section><a name="reliability"></a>
+    <section class="building">
       <div class="container">
+        <h3>надежность дома гарантируется</h3>
         <div class="wrap">
           <div class="home_photo"><img src="images/dom_gar.jpg" alt=""></div>
         </div>
         <div class="info">
-          <h3>надежность дома гарантируется</h3>
-          <h4>качеством строительных материалов, ответственными строителями и проектировщиками</h4>
+          <ul>
+            <li><b>Качеством</b> строительных материалов</li>
+            <li><b>Ответственными</b> строителями и проектировщиками</li>
+          </ul>
           <div class="reg">
             <div class="reg_elem">
               <div class="icon"><img src="http://placehold.it/640/480" alt=""></div>
@@ -147,7 +150,7 @@
       </div>
       <footer class="blue"></footer>
     </section>
-    <!--include sections/report.jade-->
+    <!--include sections/report.jade--><a name="flats"></a>
     <section class="plans">
       <div class="wrap">
         <header>Выберите этаж и подъезд</header>
@@ -467,25 +470,25 @@
             <h3>Выберите квартиру</h3>
             <div class="content"> <img src="images/plans/plan_a/block_a.png">
               <!-- svg elems-->
-              <svg id="plan_a" xmlns="http://www.w3.org/2000/svg" width="500" height="280" viewBox="0 0 500 280" style="position:absolute;top:6px">
-                <polygon points="0 68 67.17 68 67.17 56.33 122.83 56.33 123.5 11.33 94.5 11.33 94.5 0 38.17 0 38 10 38 11.17 6.33 11 6.33 44 0 44 0 68" class="shape"></polygon>
+              <svg xmlns="http://www.w3.org/2000/svg" width="500" height="280" viewBox="0 0 500 280" style="position:absolute;top:6px" class="plan_for_click">
+                <polygon points="0 68 67.17 68 67.17 56.33 122.83 56.33 123.5 11.33 94.5 11.33 94.5 0 38.17 0 38 10 38 11.17 6.33 11 6.33 44 0 44 0 68" onclick="changeInfo('15 000 000', 'plan_a/block_a_1.png', 'Комната', 2, 95.3, 48.5, 35.3, 22.5, null, 1, 'нет');" class="shape"></polygon>
               </svg>
-              <svg id="plan_a" xmlns="http://www.w3.org/2000/svg" width="235" height="220" viewBox="0 0 235 220" style="position:absolute;top:12px;left:676px">
+              <svg xmlns="http://www.w3.org/2000/svg" width="235" height="220" viewBox="0 0 235 220" style="position:absolute;top:12px;left:676px" class="plan_for_click">
                 <polygon points="0 10.63 0 53.79 57.38 53.62 56.06 0 29.43 0 29.28 10.75 0 10.63" class="shape"></polygon>
               </svg>
-              <svg id="plan_a" xmlns="http://www.w3.org/2000/svg" width="228" height="268" viewBox="0 0 228 268" style="position:absolute;top:12px;left:913px">
+              <svg xmlns="http://www.w3.org/2000/svg" width="228" height="268" viewBox="0 0 228 268" style="position:absolute;top:12px;left:913px" class="plan_for_click">
                 <polygon points="0 0 0 65.58 55.67 65.58 55.67 11.75 52.25 11.75 52.25 0 0 0" class="shape"></polygon>
               </svg>
-              <svg id="plan_a" xmlns="http://www.w3.org/2000/svg" width="375" height="270" viewBox="0 0 375 270" style="position:absolute;top:287px;left:0">
+              <svg xmlns="http://www.w3.org/2000/svg" width="375" height="270" viewBox="0 0 375 270" style="position:absolute;top:287px;left:0" class="plan_for_click">
                 <polygon points="0 0 87.5 0 87.5 66.01 61.42 66.01 61.42 54.09 8.67 54.09 8.67 23.17 0 23.17 0 0" class="shape"></polygon>
               </svg>
-              <svg id="plan_a" xmlns="http://www.w3.org/2000/svg" width="221" height="266" viewBox="0 0 221 266" style="position:absolute;top:287px;left:368px">
+              <svg xmlns="http://www.w3.org/2000/svg" width="221" height="266" viewBox="0 0 221 266" style="position:absolute;top:287px;left:368px" class="plan_for_click">
                 <polygon points="0 0 53.92 0 53.92 54.42 26.96 54.42 26.96 65.01 0 65.01 0 0" class="shape"></polygon>
               </svg>
-              <svg id="plan_a" xmlns="http://www.w3.org/2000/svg" width="221" height="266" viewBox="0 0 221 266" style="position:absolute;top:287px;left:593px">
+              <svg xmlns="http://www.w3.org/2000/svg" width="221" height="266" viewBox="0 0 221 266" style="position:absolute;top:287px;left:593px" class="plan_for_click">
                 <polygon points="0 0 53.75 0 53.75 64.17 26.88 64.17 26.88 53.42 0 53.42 0 0" class="shape"></polygon>
               </svg>
-              <svg id="plan_a" xmlns="http://www.w3.org/2000/svg" width="322" height="261" viewBox="0 0 322 261" style="position:absolute;top:287px;left:817px">
+              <svg xmlns="http://www.w3.org/2000/svg" width="322" height="261" viewBox="0 0 322 261" style="position:absolute;top:287px;left:817px" class="plan_for_click">
                 <polygon points="0.13 0 0 63.75 26.25 63.75 26.25 52.75 78.75 52.75 78.75 0.08 0.13 0" class="shape"></polygon>
               </svg>
             </div>
@@ -495,29 +498,109 @@
             <h3>Выберите квартиру</h3>
             <div class="content"> <img src="images/plans/plan_b/block_b.png">
               <!-- svg elems-->
-              <svg xmlns="http://www.w3.org/2000/svg" width="224" height="438" viewBox="0 0 224 438" style="position:absolute;top:71px;left:27px">
+              <svg xmlns="http://www.w3.org/2000/svg" width="224" height="438" viewBox="0 0 224 438" style="position:absolute;top:71px;left:27px" class="plan_for_click">
                 <polygon points="1.34 0.5 31 0.5 31 41 55.17 41 55.17 53.83 51.84 53.83 51.84 107.17 0.5 107.17 1.34 0.5" class="shape"></polygon>
               </svg>
-              <svg xmlns="http://www.w3.org/2000/svg" width="332" height="213" viewBox="0 0 332 213" style="position:absolute;top:18px;left:155px">
+              <svg xmlns="http://www.w3.org/2000/svg" width="332" height="213" viewBox="0 0 332 213" style="position:absolute;top:18px;left:155px" class="plan_for_click">
                 <polygon points="0 52 81.13 52 81.13 11.75 52.13 11.75 52.13 0 0 0 0 52" class="shape"></polygon>
               </svg>
-              <svg xmlns="http://www.w3.org/2000/svg" width="233" height="219" viewBox="0 0 233 219" style="position:absolute;top:12px;left:664px">
+              <svg xmlns="http://www.w3.org/2000/svg" width="233" height="219" viewBox="0 0 233 219" style="position:absolute;top:12px;left:664px" class="plan_for_click">
                 <polygon points="0 13 30.38 13 30.38 0 56.88 0 56.88 53.63 0 53.63 0 13" class="shape"></polygon>
               </svg>
-              <svg xmlns="http://www.w3.org/2000/svg" width="222" height="495" viewBox="0 0 222 495" style="position:absolute;top:12px;left:901px">
+              <svg xmlns="http://www.w3.org/2000/svg" width="222" height="495" viewBox="0 0 222 495" style="position:absolute;top:12px;left:901px" class="plan_for_click">
                 <polygon points="0.75 0 26.63 0 26.63 12.75 54.25 12.75 54.25 120.5 3.88 120.5 3.88 66.13 0 66.13 0 0 0.75 0" class="shape"></polygon>
               </svg>
-              <svg xmlns="http://www.w3.org/2000/svg" width="330" height="256" viewBox="0 0 330 256" style="position:absolute;top:291px;left:578px">
+              <svg xmlns="http://www.w3.org/2000/svg" width="330" height="256" viewBox="0 0 330 256" style="position:absolute;top:291px;left:578px" class="plan_for_click">
                 <polygon points="0 0 80.63 0 80.63 62.5 29 62.5 29 53 0 53 0 0" class="shape"></polygon>
               </svg>
-              <svg xmlns="http://www.w3.org/2000/svg" width="331" height="262" viewBox="0 0 331 262" style="position:absolute;top:291px;left:244px">
+              <svg xmlns="http://www.w3.org/2000/svg" width="331" height="262" viewBox="0 0 331 262" style="position:absolute;top:291px;left:244px" class="plan_for_click">
                 <polygon points="0 0 80.88 0 80.88 53.38 55.63 53.38 55.63 64.13 0 64.13 0 0" class="shape"></polygon>
               </svg>
             </div>
           </div>
-          <div class="plan plan_C close"></div>
+          <div class="plan plan_C close">
+            <div class="closer"></div>
+            <h3>Выберите квартиру</h3>
+            <div class="content"> <img src="images/plans/plan_c/block_c.png">
+              <!-- svg elems-->
+              <svg xmlns="http://www.w3.org/2000/svg" width="223" height="262" viewBox="0 0 223 262" style="position:absolute;top:18px;left:35px" class="plan_for_click">
+                <polygon points="0.5 64.75 53.63 64.75 53.63 12.25 55 12.25 55 0.5 3.63 0.5 3.63 12.13 0.5 12.13 0.5 64.75" class="shape"></polygon>
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="223" height="210" viewBox="0 0 223 210" style="position:absolute;top:22px;left:258px" class="plan_for_click">
+                <polygon points="0.5 0.5 26.25 0.5 26.25 11.5 55 11.5 55 51.75 0.5 51.75 0.5 0.5" class="shape"></polygon>
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="223" height="210" viewBox="0 0 223 210" style="position:absolute;top:18px;left:656px" class="plan_for_click">
+                <polygon points="0.5 11.46 28.5 11.46 28.5 0.5 54.83 0.5 54.83 51.75 0.5 51.75 0.5 11.46" class="shape"></polygon>
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="228" height="264" viewBox="0 0 228 264" style="position:absolute;top:18px;left:881px" class="plan_for_click">
+                <polygon points="1.83 64.92 56.25 64.92 56.25 12.17 26.58 12.17 26.58 0.5 0.5 0.5 0.5 64.92 1.83 64.92" class="shape"></polygon>
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="319" height="262" viewBox="0 0 319 262" style="position:absolute;top:292px;left:786px" class="plan_for_click">
+                <polygon points="0.5 0.5 78.42 0.5 78.42 53.83 26.58 53.83 26.58 64.42 0.5 64.42 0.5 0.5" class="shape"></polygon>
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="218" height="262" viewBox="0 0 218 262" style="position:absolute;top:292px;left:567px" class="plan_for_click">
+                <polygon points="0.5 0.5 53.67 0.5 53.67 64.25 27.67 64.25 27.67 53 0.5 53 0.5 0.5" class="shape"></polygon>
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="218" height="262" viewBox="0 0 218 262" style="position:absolute;top:290px;left:349px" class="plan_for_click">
+                <polygon points="0.5 0.5 53.67 0.5 53.67 53.67 27.08 53.67 27.08 64.25 0.5 64.25 0.5 0.5" class="shape"></polygon>
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="313" height="262" viewBox="0 0 313 262" style="position:absolute;top:290px;left:33px" class="plan_for_click">
+                <polygon points="0 0 76.42 0 76.42 64.17 50.5 64.17 50.5 52.75 0 52.75 0 0" class="shape"></polygon>
+              </svg>
+            </div>
+          </div>
         </section>
       </div>
+      <section class="plan_info close">
+        <div class="closer"></div>
+        <h3>Описание квартиры</h3>
+        <div class="container"><img id="image_plan" src="images/compas.png" alt="compas">
+          <div class="image_plan">
+            <div class="price"><span>цена</span><br><span id="price_plan">15 616 800 тнг</span></div><img id="img_plan" src="images/plans/plan_a/block_a_6.png">
+          </div>
+          <div class="text_plan">
+            <h4 id="header_plan">1 подъезд, 2 этаж, квартира №16</h4>
+            <table>
+              <tr>
+                <td>тип планировки </td>
+                <td id="type_plan">студия</td>
+              </tr>
+              <tr>
+                <td>количество комнат</td>
+                <td id="quantityRoom_plan">3</td>
+              </tr>
+              <tr>
+                <td>общая площадь</td>
+                <td><span id="allSquare_plan">72,3м</span><sup>2</sup></td>
+              </tr>
+              <tr>
+                <td>жилая площадь</td>
+                <td><span id="liveSquare_plan">51,3м</span><sup>2</sup></td>
+              </tr>
+              <tr>
+                <td>гостиная + кухня ниша</td>
+                <td><span id="kitchenSquare_plan">24,1м</span><sup>2</sup></td>
+              </tr>
+              <tr>
+                <td>спальня 1</td>
+                <td><span id="bedroomOneSquare_plan">17,9м</span><sup>2</sup></td>
+              </tr>
+              <tr>
+                <td>спальня 2</td>
+                <td><span id="bedroomTwoSquare_plan">17,9м</span><sup>2</sup></td>
+              </tr>
+              <tr>
+                <td>туалет</td>
+                <td id="toulet_plan">1</td>
+              </tr>
+              <tr>
+                <td>балкон</td>
+                <td id="balcon_plan">1</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </section>
       <footer class="white"></footer>
     </section>
     <section class="advice"><a name="newpeople"></a>
@@ -543,22 +626,24 @@
           </div>
         </div>
       </footer>
-    </section>
-    <section class="choose open_tab"><a name="choose"></a>
+    </section><a name="choose"></a>
+    <section class="choose open_tab">
       <section class="container">
         <h2>как правильно выбрать жилье</h2>
-        <ul>
+        <ul class="half">
           <li><span>необходимо <b>определить район</b> <br> - при выборе район в радиусе 5 км: будет знакомые магазины, ТРЦ, школы и т.д. <br> - новая география это поиск и смена всех привычных посещаемых мест </span></li>
           <li><span>выбираем <b>необходимую инфраструктуру</b> <br> -  для семьи с возрастом супругов до 40 лет в семье с детьми необходимы детские сады, школы и детские больницы, плюс магазины под рукой <br> - для семьи с возрастом супругов более 50-60 лет важна тишина и  близость парков </span></li>
           <li><span>определяем <b>размер квартиры</b> <br> - для комфортного и позитивного проживания, метраж квартиры должен быть из расчета 22-30 м2 на человека. Это обеспечит комфортную жизнь и уменьшит бытовые конфликты <br>  - количество  комнат рассчитывается по формуле: члены семьи х 1.2 комнаты, в расчет возьмите будущих детей</span></li>
+        </ul>
+        <ul class="half">
           <li><span>а дополнительная комната позволяет разместить отдельно детей особенно разнополых, принять в гости родителей или заняться вечерней работой, хобби и пр. </span></li>
           <li><span>оцениваем насколько <b>нравится место дома</b> <br> - панорама из окон: парк, дорога, дворы <br> - транспортная доступность: остановки, подъездные пути</span></li>
           <li><span>выбираем <b>способ оплаты</b> <br> - 100% оплаты, ипотека, рассрочка</span></li>
         </ul>
       </section>
       <footer class="blue"></footer>
-    </section>
-    <section class="profit close_tab"><a name="profit"></a>
+    </section><a name="profit"></a>
+    <section class="profit close_tab">
       <div class="container">
         <h2>почему сейчас выгодно купить большую квартиру</h2>
         <ul class="half">
@@ -571,8 +656,8 @@
         </ul>
       </div>
       <footer class="blue"></footer>
-    </section>
-    <section class="profit_2 profit close_tab"><a name="price"></a>
+    </section><a name="price"></a>
+    <section class="profit_2 profit close_tab">
       <div class="container">
         <h2>Как организовать переезд в квартиры</h2>
         <ul class="half">
@@ -586,10 +671,81 @@
         </ul>
       </div>
       <footer class="blue"></footer>
-    </section>
-    <section class="size table close_tab"><a name="size"></a>
+    </section><a name="flat_price"></a>
+    <section class="flat_price table close_tab">
       <div class="container">
         <h2>как можно снижать платежи по ипотеке</h2>
+        <div class="table_wrap">
+          <table>
+            <tr>
+              <th>Показатель</th>
+              <th>Сейчас</th>
+              <th>В ближайшем</th>
+            </tr>
+            <tr>
+              <td><b>Рыночный % по ипотеке</b></td>
+              <td>15%</td>
+              <td>12% и далее до 10%</td>
+            </tr>
+            <tr>
+              <td><b>Цены квартиры</b></td>
+              <td>200 тыс тнг/м2 <br> (50 м2 = 10 млн тнг)</td>
+              <td>300 тыс тнг/м2 <br> (50 м2 = 15 млн тнг)</td>
+            </tr>
+            <tr>
+              <td><b>Доля ипотеки в цене квартиры</b></td>
+              <td>70% <br> 7 млн тнг</td>
+              <td>40 - 50% <br> Те же 7 млн</td>
+            </tr>
+            <tr>
+              <td><b>Надежность платежей заемщика</b></td>
+              <td>неизвестна</td>
+              <td>платит своевременно три года</td>
+            </tr>
+            <tr>
+              <td><b>Зарплата</b></td>
+              <td>80 тыс тнг</td>
+              <td>100 тыс тнг</td>
+            </tr>
+            <tr>
+              <td><b>Платежи</b></td>
+              <td>100 тыс тнг</td>
+              <td>70 тыс тнг</td>
+            </tr>
+          </table>
+        </div>
+        <p>Указаны примерные платежи, для более точных расчетов связываетесь с менеджерами Комфортного Города или вашего банка</p>
+      </div>
+      <footer class="blue"></footer>
+    </section><a name="developers"></a>
+    <section class="success">
+      <div class="container">
+        <h2>успешные проекты надежного девелопера</h2>
+        <p>Надежный застройщик:</p>
+        <ul>
+          <li><span>Контроль качества на всех этапах строительства</span></li>
+          <li><span>Слаженная команда управленцев</span></li>
+          <li><span>Сильные финансовые партнеры: Жилстрой, АзияКредит</span></li>
+          <li><span>Соблюдаются стандарты строительства: ГОСТЫ и СНИПы</span></li>
+        </ul>
+        <div class="company">
+          <div class="elem"><img src="images/comfort.jpg" alt=""></div>
+          <div class="elem"><a href="http://vkomforte.kz/"><img src="images/shan.jpg" alt=""></a></div>
+          <div class="elem"><img src="images/dom.jpg" alt=""></div>
+        </div>
+      </div>
+      <footer class="white"> </footer>
+    </section><a name="size"></a>
+    <section class="size table">
+      <div class="container">
+        <h2>приятные цены и финансовые выгоды</h2>
+        <h4>выберите удобный вариант оплаты</h4>
+        <ul>
+          <li>100%, ипотека, рассрочка</li>
+          <li>квартиры от 8,6 млн. тнг или всего 216 тыс. тнг за м<sup>2</sup></li>
+          <li>при старте продаж экономия из-за низкой цены квадратного метра 189 тыс. тнг <br> далее ожидается  рос цен в Караганде на 10%-15%</li>
+        </ul>
+        <div class="price"><img src="images/price.png"></div>
         <div class="table_wrap">
           <table>
             <tr>
@@ -647,72 +803,8 @@
         <p>Указаны примерные платежи, для более точных расчетов связываетесь с менеджерами Комфортного Города или вашего банка</p>
       </div>
       <footer class="blue"></footer>
-    </section>
-    <section class="success"><a name="developers"></a>
-      <div class="container">
-        <h2>успешные проекты надежного девелопера</h2>
-        <p>Надежный застройщик:</p>
-        <ul>
-          <li><span>Контроль качества на всех этапах строительства</span></li>
-          <li><span>Слаженная команда управленцев</span></li>
-          <li><span>Сильные финансовые партнеры: Жилстрой, АзияКредит</span></li>
-          <li><span>Соблюдаются стандарты строительства: ГОСТЫ и СНИПы</span></li>
-        </ul>
-        <div class="company">
-          <div class="elem"><img src="images/comfort.jpg" alt=""></div>
-          <div class="elem"><a href="http://vkomforte.kz/"><img src="images/shan.jpg" alt=""></a></div>
-          <div class="elem"><img src="images/dom.jpg" alt=""></div>
-        </div>
-      </div>
-      <footer class="white"> </footer>
-    </section>
-    <section class="flat_price table"><a name="flat_price"></a>
-      <div class="container">
-        <h2>приятные цены и финансовые выгоды</h2>
-        <div class="table_wrap">
-          <table>
-            <tr>
-              <th>Показатель</th>
-              <th>Сейчас</th>
-              <th>В ближайшем</th>
-            </tr>
-            <tr>
-              <td><b>Рыночный % по ипотеке</b></td>
-              <td>15%</td>
-              <td>12% и далее до 10%</td>
-            </tr>
-            <tr>
-              <td><b>Цены квартиры</b></td>
-              <td>200 тыс тнг/м2 <br> (50 м2 = 10 млн тнг)</td>
-              <td>300 тыс тнг/м2 <br> (50 м2 = 15 млн тнг)</td>
-            </tr>
-            <tr>
-              <td><b>Доля ипотеки в цене квартиры</b></td>
-              <td>70% <br> 7 млн тнг</td>
-              <td>40 - 50% <br> Те же 7 млн</td>
-            </tr>
-            <tr>
-              <td><b>Надежность платежей заемщика</b></td>
-              <td>неизвестна</td>
-              <td>платит своевременно три года</td>
-            </tr>
-            <tr>
-              <td><b>Зарплата</b></td>
-              <td>80 тыс тнг</td>
-              <td>100 тыс тнг</td>
-            </tr>
-            <tr>
-              <td><b>Платежи</b></td>
-              <td>100 тыс тнг</td>
-              <td>70 тыс тнг</td>
-            </tr>
-          </table>
-        </div>
-        <p>Указаны примерные платежи, для более точных расчетов связываетесь с менеджерами Комфортного Города или вашего банка</p>
-      </div>
-      <footer class="blue"></footer>
-    </section>
-    <section class="review"><a name="sales"></a>
+    </section><a name="sales"></a>
+    <section class="review">
       <div class="container">
         <h2>профессиональный и вежливый отдел продаж подробно расскажет о квартирах</h2>
         <div class="review_block">

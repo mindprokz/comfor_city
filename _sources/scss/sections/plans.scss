@@ -70,7 +70,8 @@
   }
 }
 
-.plans .plan .closer {
+.plans .plan .closer,
+.plans .plan_info .closer {
   height: 17px;
   width: 17px;
   position: absolute;
@@ -139,4 +140,146 @@
   span {
     font-size: 40px;
   }
+}
+
+.plans .plan_info {
+  background: #eaf6fe;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  transition: transform 0.3s ease;
+
+  &.close {
+    transform: translateX(-100%);
+  }
+}
+
+.plans .plan_info h3 {
+  color: #db9023;
+  text-transform: lowercase;
+  font-weight: 300;
+  text-align: center;
+  font-size: 25px;
+  padding-top: 20px;
+  padding-bottom: 15px;
+}
+
+.plans .plan_info .container { position: relative; }
+
+.plans .plan_info img[alt="compas"] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 20px;
+  width: 80px;
+  height: 80px;
+
+  @media (min-width: 1px) { display: none; }
+
+  @media (min-width: 800px) { display: inline; }
+}
+
+.plans .plan_info .image_plan {
+  position: relative;
+  box-sizing: border-box;
+  text-align: center;
+
+  @media (min-width: 1px) {
+    @include span(12);
+
+    margin-top: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  @media (min-width: 800px) {
+    @include span(5);
+
+    margin-top: 80px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.plans .plan_info .image_plan .price {
+  position: absolute;
+  top: -50px;
+  left: 0;
+  width: 120px;
+  height: 120px;
+  background: #e20613;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 50%;
+  font-size: 15px;
+  border: 5px solid;
+  box-sizing: border-box;
+  padding-top: 37px;
+  cursor: default;
+}
+
+.plans .plan_info .image_plan img {
+  max-width: 100%;
+  max-height: 500px;
+}
+
+.plans .plan_info .text_plan {
+  @media (min-width: 1px) {
+    @include span(12);
+
+    padding-top: 20px;
+  }
+
+  @media (min-width: 800px) {
+    @include span(7);
+
+    padding-top: 120px;
+  }
+}
+
+.plans .plan_info .text_plan h4 {
+  color: #f29100;
+  font-weight: 700;
+  font-size: 25px;
+  text-align: center;
+}
+
+.plans table {
+  width: 360px;
+  margin: auto;
+  margin-top: 35px;
+
+  @media (min-width: 1px) {
+    margin-bottom: 100px;
+  }
+
+  tr:nth-child(2n) {
+    background: #f8b133;
+  }
+
+  tr:nth-child(2n + 1) {
+    background: #fff;
+  }
+}
+
+.plans table tr td {
+  padding: 5px 10px;
+  color: #6f6f6e;
+  vertical-align: middle;
+
+  &:nth-child(2n) {
+    border-left: 4px solid #eaf6fe;
+  }
+}
+
+.plans sup {
+  vertical-align: super;
+  font-size: 12px;
+}
+
+.plans .none {
+  display: none;
 }

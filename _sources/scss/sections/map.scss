@@ -27,7 +27,35 @@
   }
 
   li {
-    text-align: center;
+    position: relative;
+    color: #595857;
+    padding-left: 25px;
+    padding-top: 5px;
+
+    &::after {
+      content: ".";
+      display: block;
+      height: 0;
+      clear: both;
+      visibility: hidden;
+    }
+
+    &::before {
+      content: '●';
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #e5ae2a;
+      padding-right: 10px;
+      width: 3%;
+      height: 100%;
+      box-sizing: border-box;
+    }
+
+    @media (min-width: 600px) {
+      width: 600px;
+      margin: auto;
+    }
   }
 
   footer {

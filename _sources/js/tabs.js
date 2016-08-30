@@ -4,7 +4,7 @@ export default function() {
     document.querySelector('.choose'),
     document.querySelector('.profit'),
     document.querySelector('.profit_2'),
-    document.querySelector('.size'),
+    document.querySelector('.flat_price'),
   ];
 
   // Вешаем обработчики событий на табы

@@ -1,3 +1,4 @@
+a(name="flats")
 section.plans
   .wrap
     header="Выберите этаж и подъезд"
@@ -242,7 +243,72 @@ section.plans
           include ../svg/plan_b_3.jade 
           include ../svg/plan_b_4.jade
           include ../svg/plan_b_5.jade
-          include ../svg/plan_b_6.jade 
+          include ../svg/plan_b_6.jade
       .plan.plan_C.close
-    
+        .closer
+        h3="Выберите квартиру"
+        .content 
+          img(src="images/plans/plan_c/block_c.png")
+          // svg elems
+          include ../svg/plan_d_1.jade
+          include ../svg/plan_d_2.jade
+          include ../svg/plan_d_3.jade
+          include ../svg/plan_d_4.jade
+          include ../svg/plan_d_5.jade
+          include ../svg/plan_d_6.jade
+          include ../svg/plan_d_7.jade
+          include ../svg/plan_d_8.jade 
+  section.plan_info.close
+    .closer
+    h3="Описание квартиры"
+    .container
+      img(id="image_plan" src="images/compas.png" alt="compas")
+      .image_plan
+        div.price
+          span="цена"
+          br
+          span#price_plan="15 616 800 тнг"
+        img#img_plan(src="images/plans/plan_a/block_a_6.png")
+      .text_plan
+        h4#header_plan="1 подъезд, 2 этаж, квартира №16"
+        table
+          tr
+            td="тип планировки "
+            td#type_plan="студия"
+          tr
+            td="количество комнат"
+            td#quantityRoom_plan="3"
+          tr
+            td="общая площадь"
+            td
+              span#allSquare_plan="72,3м"
+              sup="2"
+          tr
+            td="жилая площадь"
+            td
+              span#liveSquare_plan="51,3м"
+              sup="2"
+          tr
+            td="гостиная + кухня ниша"
+            td
+              span#kitchenSquare_plan="24,1м"
+              sup="2"
+          tr
+            td="спальня 1"
+            td
+              span#bedroomOneSquare_plan="17,9м"
+              sup="2"
+          tr
+            td="спальня 2"
+            td
+              span#bedroomTwoSquare_plan="17,9м"
+              sup="2"
+          tr
+            td="туалет"
+            td#toulet_plan!="1"
+          tr
+            td="балкон"
+            td#balcon_plan!="1"
+        
+        
   footer.white

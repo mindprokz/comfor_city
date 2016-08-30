@@ -36,7 +36,7 @@ $(window).load(function() {
   $("img, a").on("dragstart", function (event) { event.preventDefault(); });
 
   $(document).on('click', 'a.anchor', function () {
-       $('html, body').animate({ scrollTop:  $('a[name="'+this.hash.slice(1)+'"]').offset().top - 148 }, 1000 );
+       $('html, body').animate({ scrollTop:  $('a[name="'+this.hash.slice(1)+'"]').offset().top - 135 }, 1000 );
        return false;
    });
 });

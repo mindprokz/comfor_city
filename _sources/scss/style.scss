@@ -15,6 +15,10 @@ $container-float: 100%;
 
 body {
   font-family: Roboto, sans-serif;
+
+  @media (min-width: 900px) and (max-width: 1400px) {
+    zoom: 0.75;
+  }
 }
 
 .container-float {
@@ -40,7 +44,7 @@ footer.blue {
 
 footer.white {
   background: url('images/pattern_white.png') repeat;
-  height: 67px;
+  height: 77px;
 
   @media screen and (min-width: 1px) {
     margin-top: 20px;

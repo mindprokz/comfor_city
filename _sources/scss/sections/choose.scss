@@ -1,14 +1,43 @@
 .choose {
-  background: #FDFDFD;
+  background: #fdfdfd;
 
   h2 {
-    color: #DB9023;
+    color: #db9023;
     font-weight: 300;
     font-size: 30px;
     text-transform: lowercase;
     text-align: center;
     padding-top: 25px;
     padding-bottom: 40px;
+  }
+
+  .half {
+    @include span(6);
+
+    box-sizing: border-box;
+    text-align: left;
+
+    @media screen and (min-width: 1px) {
+      @include span(12);
+
+      padding-left: 20px;
+      padding-right: 20px;
+
+      &.second {
+        padding-left: 20px;
+      }
+    }
+
+    @media screen and (min-width: 800px) {
+      @include span(6);
+
+      padding-left: 0;
+      padding-right: 0;
+
+      &.second {
+        padding-left: 40px;
+      }
+    }
   }
 
   li {
@@ -19,7 +48,7 @@
     padding-right: 20px;
     color: #595857;
 
-    &:after {
+    &::after {
       content: ".";
       display: block;
       height: 0;
@@ -27,9 +56,9 @@
       visibility: hidden;
     }
 
-    &:before {
+    &::before {
       content: '●';
-      color: #E5AE2A;
+      color: #e5ae2a;
       padding-right: 10px;
       float: left;
       padding-bottom: 2%;
@@ -43,9 +72,8 @@
     }
   }
 
-
   b {
-    color: #E5AE2A;
+    color: #e5ae2a;
     font-weight: 700;
   }
 }

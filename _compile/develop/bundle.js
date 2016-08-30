@@ -102,7 +102,7 @@
 	  });
 
 	  $(document).on('click', 'a.anchor', function () {
-	    $('html, body').animate({ scrollTop: $('a[name="' + this.hash.slice(1) + '"]').offset().top - 148 }, 1000);
+	    $('html, body').animate({ scrollTop: $('a[name="' + this.hash.slice(1) + '"]').offset().top - 135 }, 1000);
 	    return false;
 	  });
 	});
@@ -240,7 +240,7 @@
 
 	exports.default = function () {
 	  var tabs = [].concat(_toConsumableArray(document.querySelectorAll('.advice footer .button_bottom .text')));
-	  var info_blocks = [document.querySelector('.choose'), document.querySelector('.profit'), document.querySelector('.profit_2'), document.querySelector('.size')];
+	  var info_blocks = [document.querySelector('.choose'), document.querySelector('.profit'), document.querySelector('.profit_2'), document.querySelector('.flat_price')];
 
 	  // Вешаем обработчики событий на табы
 	  tabs.forEach(function (tab, index) {
@@ -465,6 +465,85 @@
 	  document.querySelector('.second_front').addEventListener('click', function () {
 	    document.querySelector('.plan_B').classList.remove('close');
 	  });
+
+	  // closer for plan_b
+	  document.querySelector('.plan_C .closer').addEventListener('click', function () {
+	    document.querySelector('.plan_C').classList.add('close');
+	  });
+
+	  // opener for plan_b
+	  document.querySelector('.third_front').addEventListener('click', function () {
+	    document.querySelector('.plan_C').classList.remove('close');
+	  });
+
+	  // closer for plan_info
+	  document.querySelector('.plan_info .closer').addEventListener('click', function () {
+	    document.querySelector('.plan_info').classList.add('close');
+	  });
+
+	  open_planInfo();
+	};
+
+	function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+
+	function open_planInfo() {
+
+	  [].concat(_toConsumableArray(document.querySelectorAll('.plans .shape'))).forEach(function (item) {
+	    item.addEventListener('click', function () {
+	      document.querySelector('.plan_info').classList.remove('close');
+	    });
+	  });
+	}
+
+	/*
+	  @TODO -> Добавить проверку аргументов если они null то делать родителя элемента
+	  невидимым
+
+	  @ARGUMENTS
+	    pricePlan : number -> Цена квартиры
+	    imgPlan : string -> ссылка на изображение
+	    type_plan : string -> Тип планировки
+	    quantityRoom_plan : number -> Количество комнат
+	    allSquare_plan : number -> общая площадь
+	    liveSquare_plan : number -> Жилая площадь
+	    kitchenSquare_plan : number -> Площадь кухни + гостинная
+	    bedroomOneSquare_plan : number -> Площадь первой спальни
+	    bedroomTwoSquare_plan : number -> Площадь второй спальни
+	    toulet_plan : number -> Кол-во туателов
+	    balcon_plan: number -> Кол-во балконов
+
+	*/
+
+	window.changeInfo = function changeInfo(pricePlan, imgPlan, type_plan, quantityRoom_plan, allSquare_plan, liveSquare_plan, kitchenSquare_plan, bedroomOneSquare_plan, bedroomTwoSquare_plan, toulet_plan, balcon_plan) {
+	  document.querySelector('#price_plan').textContent = pricePlan + ' тнг';
+	  document.querySelector('#img_plan').src = "images/plans/" + imgPlan;
+	  document.querySelector('#type_plan').textContent = type_plan;
+	  document.querySelector('#quantityRoom_plan').textContent = quantityRoom_plan;
+	  document.querySelector('#allSquare_plan').textContent = allSquare_plan + "м";
+	  document.querySelector('#liveSquare_plan').textContent = liveSquare_plan + "м";
+	  document.querySelector('#kitchenSquare_plan').textContent = kitchenSquare_plan + "м";
+
+	  if (bedroomOneSquare_plan === null) {
+	    document.querySelector('#bedroomOneSquare_plan').parentNode.parentNode.classList.add('none');
+	  } else {
+	    var elem = document.querySelector('#bedroomOneSquare_plan');
+
+	    elem.parentNode.classList.contains('none') ? elem.parentNode.parentNode.classList.remove('none') : '';
+	    elem.textContent = bedroomOneSquare_plan + "м";
+	  }
+
+	  if (bedroomTwoSquare_plan === null) {
+	    document.querySelector('#bedroomTwoSquare_plan').parentNode.parentNode.classList.add('none');
+	  } else {
+	    var _elem = document.querySelector('#bedroomTwoSquare_plan');
+
+	    _elem.parentNode.classList.contains('none') ? _elem.parentNode.parentNode.classList.remove('none') : '';
+	    _elem.textContent = bedroomTwoSquare_plan + "м";
+	  }
+
+	  document.querySelector('#bedroomTwoSquare_plan').textContent = bedroomTwoSquare_plan + "м";
+	  document.querySelector('#toulet_plan').textContent = toulet_plan;
+	  document.querySelector('#balcon_plan').textContent = balcon_plan;
 	};
 
 /***/ }
