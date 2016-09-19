@@ -64,12 +64,13 @@ function open_planInfo() {
     kitchenSquare_plan : number -> Площадь кухни + гостинная
     bedroomOneSquare_plan : number -> Площадь первой спальни
     bedroomTwoSquare_plan : number -> Площадь второй спальни
+    bedroomThirdSquare_plan : number -> Площадь третей спальни
     toulet_plan : number -> Кол-во туателов
     balcon_plan: number -> Кол-во балконов
 
 */
 
-window.changeInfo = function changeInfo(pricePlan, imgPlan, type_plan, quantityRoom_plan, allSquare_plan, liveSquare_plan, kitchenSquare_plan, bedroomOneSquare_plan, bedroomTwoSquare_plan, toulet_plan, balcon_plan) {
+window.changeInfo = function changeInfo(pricePlan, imgPlan, type_plan, quantityRoom_plan, allSquare_plan, liveSquare_plan, kitchenSquare_plan, bedroomOneSquare_plan, bedroomTwoSquare_plan, bedroomThirdSquare_plan, toulet_plan, balcon_plan) {
   document.querySelector('#price_plan').textContent = pricePlan + ' тнг';
   document.querySelector('#img_plan').src = "images/plans/" + imgPlan;
   document.querySelector('#type_plan').textContent = type_plan;
@@ -83,7 +84,7 @@ window.changeInfo = function changeInfo(pricePlan, imgPlan, type_plan, quantityR
   } else {
     let elem = document.querySelector('#bedroomOneSquare_plan');
 
-    elem.parentNode.classList.contains('none') ? elem.parentNode.parentNode.classList.remove('none') : '';
+    elem.parentNode.parentNode.classList.contains('none') ? elem.parentNode.parentNode.classList.remove('none') : '';
     elem.textContent =  bedroomOneSquare_plan + "м";
   }
 
@@ -93,11 +94,20 @@ window.changeInfo = function changeInfo(pricePlan, imgPlan, type_plan, quantityR
   } else {
     let elem = document.querySelector('#bedroomTwoSquare_plan');
 
-    elem.parentNode.classList.contains('none') ? elem.parentNode.parentNode.classList.remove('none') : '';
+    elem.parentNode.parentNode.classList.contains('none') ? elem.parentNode.parentNode.classList.remove('none') : '';
     elem.textContent =  bedroomTwoSquare_plan + "м";
   }
 
-  document.querySelector('#bedroomTwoSquare_plan').textContent = bedroomTwoSquare_plan + "м";
+
+  if (bedroomThirdSquare_plan === null) {
+    document.querySelector('#bedroomThirdSquare_plan').parentNode.parentNode.classList.add('none');
+  } else {
+    let elem = document.querySelector('#bedroomThirdSquare_plan');
+
+    elem.parentNode.parentNode.classList.contains('none') ? elem.parentNode.parentNode.classList.remove('none') : '';
+    elem.textContent =  bedroomThirdSquare_plan + "м";
+  }
+
   document.querySelector('#toulet_plan').textContent = toulet_plan;
   document.querySelector('#balcon_plan').textContent = balcon_plan;
 }

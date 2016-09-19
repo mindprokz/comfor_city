@@ -1,8 +1,8 @@
 .success {
-  background: #E4F3FA;
+  background: #e4f3fa;
 
   h2 {
-    color: #DB9023;
+    color: #db9023;
     font-weight: 300;
     font-size: 30px;
     text-transform: lowercase;
@@ -20,14 +20,13 @@
   }
 
   li {
-    line-height: 20px;
-    padding-top: 5px;
+    line-height: 15px;
     position: relative;
     padding-left: 20px;
     padding-right: 20px;
     color: #595857;
 
-    &:after {
+    &::after {
       content: ".";
       display: block;
       height: 0;
@@ -35,9 +34,9 @@
       visibility: hidden;
     }
 
-    &:before {
+    &::before {
       content: '●';
-      color: #E5AE2A;
+      color: #e5ae2a;
       padding-right: 10px;
       float: left;
       padding-bottom: 2%;
@@ -71,5 +70,4 @@
       }
     }
   }
-
 }

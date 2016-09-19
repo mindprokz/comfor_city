@@ -91,15 +91,16 @@
         box-sizing: border-box;
 
         @media screen and (min-width: 1px) {
-          @include span(12);
+          @include span(6);
 
           padding: 20px;
+          margin: auto;
         }
 
         @media screen and (min-width: 800px) {
           @include span(4);
 
-          padding: 0 20px;
+          padding: 0 10px;
         }
 
         .icon {
@@ -120,11 +121,28 @@
             left: 50%;
             transform: translate(-50%, -50%);
             width: 100%;
+            box-sizing: border-box;
+            padding: 10px;
           }
         }
 
         h5 {
           color: #595857;
+          font-size: 13px;
+
+          &.name {
+            padding-bottom: 15px;
+          }
+
+          &.status {
+            padding-bottom: 15px;
+          }
+
+          &.work span {
+            padding-top: 5px;
+            padding-bottom: 5px;
+            display: block;
+          }
         }
       }
     }
