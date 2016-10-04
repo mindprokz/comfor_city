@@ -1,10 +1,10 @@
 section.modal.close_modal
   .wrap
-    .form
+    form#application
       .wrap
         .closer
         h3="Оставьте заявку"
-        input(type="text" required placeholder="Имя")
-        input(type="mail" required placeholder="E-mail")
-        input(type="tel" required placeholder="Телефон")
+        input(type="text" name="name" required placeholder="Имя")
+        input(type="mail" name="email" required placeholder="E-mail")
+        input(type="tel" name="telephone" required placeholder="Телефон")
         button="Отправить"

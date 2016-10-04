@@ -16,7 +16,7 @@ $container-float: 100%;
 body {
   font-family: Roboto, sans-serif;
 
-  @media (min-width: 900px) and (max-width: 1400px) {
+  @media (min-width: 900px) {
     zoom: 0.75;
   }
 }

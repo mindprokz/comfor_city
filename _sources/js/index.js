@@ -1,4 +1,3 @@
-import SendFunc from './sendForm.js';
 import FloatMenu from './floatMenu.js';
 import tabsInit from './tabs.js';
 import mapInit from './map.js';
@@ -16,15 +15,6 @@ document.querySelector('.menu .closer').addEventListener('click', () => {
   menu.classList.remove('open_menu');
   menu.classList.add('close_menu');
 });
-
-// Отправка формы обратной связи скрипту для отправления по почте
-let data = {
-  name : 'input[name="name"]',
-  email : 'input[name="email"]',
-  telephone : 'input[name="telephone"]'
-};
-
-//new SendFunc('application', data, 'mail');
 
 $(window).load(function() {
 
@@ -54,3 +44,58 @@ document.querySelector('nav .number-block .button-open-form').addEventListener('
 document.querySelector('.modal .closer').addEventListener('click', function () {
   document.querySelector('.modal').classList.add('close_modal');
 });
+
+// Отправка писем
+document.querySelector('#application').addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  var data = {
+    name: document.querySelector('.modal form input[name="name"]').value,
+    mail: document.querySelector('.modal form input[name="email"]').value,
+    telephone: document.querySelector('.modal form input[name="telephone"]').value,
+  }
+
+  $.ajax({
+    type: "POST",
+    url: "mail.php",
+    data: data
+  }).done(function (value) {
+    let mail = document.getElementById('mail');
+
+    mail.innerHTML = value;
+    mail.classList.remove('not_visible_mail');
+
+    setTimeout(function () {
+      mail.innerHTML = " ";
+
+      mail.classList.add('not_visible_mail');
+    }, 3000);
+
+  });
+});
+
+// YaMetrix
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter39993590 = new Ya.Metrika({
+                id:39993590,
+                clickmap:true,
+                trackLinks:true,
+                accurateTrackBounce:true,
+                webvisor:true
+            });
+        } catch(e) { }
+    });
+
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");

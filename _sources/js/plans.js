@@ -6,8 +6,10 @@ export default function () {
   });
 
   // opener for plan_a
-  document.querySelector('.first_front').addEventListener('click', () => {
-    document.querySelector('.plan_A').classList.remove('close');
+  [...document.querySelectorAll('.first_front rect')].forEach( (elem) => {
+    elem.addEventListener('click', () => {
+      document.querySelector('.plan_A').classList.remove('close');
+    });
   });
 
 
@@ -17,8 +19,10 @@ export default function () {
   });
 
   // opener for plan_b
-  document.querySelector('.second_front').addEventListener('click', () => {
-    document.querySelector('.plan_B').classList.remove('close');
+  [...document.querySelectorAll('.second_front rect')].forEach( (elem) => {
+    elem.addEventListener('click', () => {
+      document.querySelector('.plan_B').classList.remove('close');
+    });
   });
 
 
@@ -28,14 +32,27 @@ export default function () {
   });
 
   // opener for plan_b
-  document.querySelector('.third_front').addEventListener('click', () => {
-    document.querySelector('.plan_C').classList.remove('close');
+  [...document.querySelectorAll('.third_front rect')].forEach( (elem) => {
+    elem.addEventListener('click', () => {
+      document.querySelector('.plan_C').classList.remove('close');
+    });
   });
 
 
   // closer for plan_info
   document.querySelector('.plan_info .closer').addEventListener('click', () => {
     document.querySelector('.plan_info').classList.add('close');
+  });
+
+  [...document.querySelectorAll('.plans .shape_rect')].forEach( (elem) => {
+    elem.addEventListener('click', function () {
+      let _elems = this.parentNode.nextElementSibling.children;
+
+      window.flat = {
+        porch: parseInt(_elems[0].textContent[0]),
+        floor: parseInt(_elems[1].textContent[0])
+      }
+    });
   });
 
   open_planInfo();
@@ -51,9 +68,6 @@ function open_planInfo() {
 }
 
 /*
-  @TODO -> Добавить проверку аргументов если они null то делать родителя элемента
-  невидимым
-
   @ARGUMENTS
     pricePlan : number -> Цена квартиры
     imgPlan : string -> ссылка на изображение
@@ -67,10 +81,11 @@ function open_planInfo() {
     bedroomThirdSquare_plan : number -> Площадь третей спальни
     toulet_plan : number -> Кол-во туателов
     balcon_plan: number -> Кол-во балконов
+    number_flat: numbar -> Номер квартиры
 
 */
 
-window.changeInfo = function changeInfo(pricePlan, imgPlan, type_plan, quantityRoom_plan, allSquare_plan, liveSquare_plan, kitchenSquare_plan, bedroomOneSquare_plan, bedroomTwoSquare_plan, bedroomThirdSquare_plan, toulet_plan, balcon_plan) {
+window.changeInfo = function changeInfo(pricePlan, imgPlan, type_plan, quantityRoom_plan, allSquare_plan, liveSquare_plan, kitchenSquare_plan, bedroomOneSquare_plan, bedroomTwoSquare_plan, bedroomThirdSquare_plan, toulet_plan, balcon_plan, number_flat) {
   document.querySelector('#price_plan').textContent = pricePlan + ' тнг';
   document.querySelector('#img_plan').src = "images/plans/" + imgPlan;
   document.querySelector('#type_plan').textContent = type_plan;
@@ -110,4 +125,38 @@ window.changeInfo = function changeInfo(pricePlan, imgPlan, type_plan, quantityR
 
   document.querySelector('#toulet_plan').textContent = toulet_plan;
   document.querySelector('#balcon_plan').textContent = balcon_plan;
+
+  switch (window.flat.porch) {
+    case 1:
+      if (window.flat.floor >= 1 && number_flat === 1) {
+        document.querySelector('#header_plan').textContent = window.flat.porch +
+        ' подъезд, ' + window.flat.floor + ' этаж, квартира №' + (7 * (window.flat.floor - 1) - 6)
+      } else {
+        document.querySelector('#header_plan').textContent = window.flat.porch +
+          ' подъезд, ' + window.flat.floor + ' этаж, квартира №' + (7 * (window.flat.floor - 1) - (7 - number_flat))
+     }
+    break;
+
+    case 2:
+      if (window.flat.floor >= 1 && number_flat === 1) {
+        document.querySelector('#header_plan').textContent = window.flat.porch +
+        ' подъезд, ' + window.flat.floor + ' этаж, квартира №' + (6 * (window.flat.floor - 1) - 5 + 56)
+      } else {
+        document.querySelector('#header_plan').textContent = window.flat.porch +
+          ' подъезд, ' + window.flat.floor + ' этаж, квартира №' + (6 * (window.flat.floor - 1) - (6 - number_flat) + 56)
+     }
+    break;
+
+    case 3:
+      if (window.flat.floor >= 1 && number_flat === 1) {
+        document.querySelector('#header_plan').textContent = window.flat.porch +
+        ' подъезд, ' + window.flat.floor + ' этаж, квартира №' + (7 * (window.flat.floor - 1) - 6 + 104)
+      } else {
+        document.querySelector('#header_plan').textContent = window.flat.porch +
+          ' подъезд, ' + window.flat.floor + ' этаж, квартира №' + (104 + 7 * (window.flat.floor - 1) - (7 - number_flat))
+     }
+    break;
+
+  }
+
 }
