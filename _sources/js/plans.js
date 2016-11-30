@@ -63,6 +63,7 @@ function open_planInfo() {
   [...document.querySelectorAll('.plans .shape')].forEach( (item) => {
     item.addEventListener('click', () => {
       document.querySelector('.plan_info').classList.remove('close');
+      document.querySelector('.plans').scrollLeft = 0;
     });
   });
 }

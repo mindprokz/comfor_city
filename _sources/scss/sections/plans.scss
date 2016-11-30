@@ -98,6 +98,10 @@
   transform: scale(4.1);
   transition: fill 0.3s ease;
 
+  &.twox {
+    transform: scale(1.9);
+  }
+
   &:hover {
     fill: rgba(#db9023, 0.5);
   }

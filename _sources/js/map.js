@@ -24,6 +24,7 @@ export default function () {
     [49.807869, 73.105850],
     [49.809002, 73.105055],
     [49.813257, 73.088745],
+    [49.780744, 73.127031],
   ];
 
   let _markersImageShop = [
@@ -44,6 +45,7 @@ export default function () {
     'images/markers/avtomir.png',
     'images/markers/autocenter.png',
     'images/markers/continental.png',
+    'images/markers/main.png',
   ];
 
   // Добавляем на карту метки
@@ -68,6 +70,7 @@ export default function () {
     [49.781341, 73.134767],
     [49.775265, 73.125921],
     [49.776326, 73.126446],
+    [49.780744, 73.127031],
   ];
 
   let _markersImagerelax = [
@@ -79,6 +82,7 @@ export default function () {
     'images/markers/sobor.png',
     'images/markers/etnopark.png',
     'images/markers/mechet.png',
+    'images/markers/main.png',
   ];
 
   // Добавляем на карту метки
@@ -103,6 +107,7 @@ export default function () {
     [49.810373, 73.111824],
     [49.813272, 73.111196],
     [49.810131, 73.087690],
+    [49.780744, 73.127031],
   ];
 
   let _markersImageLearn = [
@@ -113,6 +118,7 @@ export default function () {
     'images/markers/akkniet.png',
     'images/markers/gramot.png',
     'images/markers/gvozd.png',
+    'images/markers/main.png',
   ];
 
   // Добавляем на карту метки
@@ -129,10 +135,12 @@ export default function () {
 
   let _coordsHealth = [
     [49.787168, 73.145247],
+    [49.780744, 73.127031],
   ];
 
   let _markersImageHealth = [
     'images/markers/polikl.png',
+    'images/markers/main.png',
   ]
 
   // Добавляем на карту метки

@@ -22,7 +22,7 @@
       }
 
       @media all and (min-width: 800px) {
-        @include span(4);
+        @include span(6);
 
         text-align: left;
       }

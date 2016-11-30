@@ -26,9 +26,11 @@ $(window).load(function() {
   $("img, a").on("dragstart", function (event) { event.preventDefault(); });
 
   $(document).on('click', 'a.anchor', function () {
-       console.log($('a[name="'+this.hash.slice(1)+'"]')[0].getBoundingClientRect().top);
-       $('html, body').animate({ scrollTop: pageYOffset + $('a[name="'+this.hash.slice(1)+'"]')[0].getBoundingClientRect().top * 0.75 - 135 }, 1000 );
-       return false;
+    $('html, body').animate({ scrollTop: pageYOffset + $('a[name="'+this.hash.slice(1)+'"]')[0].getBoundingClientRect().top * 0.75 - 135 }, 1000 );
+    let menu = document.querySelector('.menu');
+    menu.classList.remove('open_menu');
+    menu.classList.add('close_menu');
+    return false;
    });
 });
 

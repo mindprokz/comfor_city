@@ -69,6 +69,19 @@ nav {
     }
   }
 
+  .mobile_number-block {
+    @media (min-width: 1px) {
+      display: block;
+      position: absolute;
+      top: 15px;
+      left: 15px;
+    }
+
+    @media (min-width: 800px) {
+      display: none;
+    }
+  }
+
   .burger {
     border: 1px solid #2b4275;
     float: right;
@@ -107,6 +120,7 @@ nav {
         transition: transform 0.3s ease;
         overflow: auto;
         height: 100vh;
+        padding-top: 55px;
       }
 
       @media screen and (min-width: 800px) {
@@ -140,6 +154,7 @@ nav {
       top: 25px;
       right: 25px;
       cursor: pointer;
+      transform: scale(1.5);
 
       @media screen and (min-width: 1px) {
         display: block;
