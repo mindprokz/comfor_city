@@ -6,7 +6,7 @@ export default function () {
   });
 
   // opener for plan_a
-  [...document.querySelectorAll('.first_front rect')].forEach( (elem) => {
+  [...document.querySelectorAll('.third_front rect')].forEach( (elem) => {
     elem.addEventListener('click', () => {
       document.querySelector('.plan_A').classList.remove('close');
     });
@@ -32,7 +32,7 @@ export default function () {
   });
 
   // opener for plan_b
-  [...document.querySelectorAll('.third_front rect')].forEach( (elem) => {
+  [...document.querySelectorAll('.first_front rect')].forEach( (elem) => {
     elem.addEventListener('click', () => {
       document.querySelector('.plan_C').classList.remove('close');
     });
