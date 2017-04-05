@@ -1,7 +1,8 @@
-import FloatMenu from './floatMenu.js';
-import tabsInit from './tabs.js';
-import mapInit from './map.js';
-import plansInit from './plans.js';
+import FloatMenu from './floatMenu'
+import tabsInit from './tabs'
+import mapInit from './map'
+import plansInit from './plans'
+import sliderInit from './slider'
 
 // Нажатие на бургер
 document.querySelector('.burger').addEventListener('click', () => {
@@ -16,12 +17,16 @@ document.querySelector('.menu .closer').addEventListener('click', () => {
   menu.classList.add('close_menu');
 });
 
-$(window).load(function() {
 
-  $('.flexslider').flexslider({
-    animation: "slide",
-    animationLoop: false,
+
+$(window).load(function() {
+  // fancybox
+  $(".fancybox").fancybox({
+  	openEffect: 'fade',
+  	closeEffect: 'fade'
   });
+
+  sliderInit();
 
   $("img, a").on("dragstart", function (event) { event.preventDefault(); });
 

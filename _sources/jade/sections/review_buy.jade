@@ -1,0 +1,27 @@
+|<?php 
+|  $part = array(
+|    'post_type' => 'review', //Тип поста
+|    'posts_per_page' => 3,//Постов на одной странице
+|    'category_name' => 'review' //Категория постов
+|  );
+|?>
+
+a(name="rev_buy")
+section.review
+  .container
+    h2="отзывы покупателей"
+    .review_block
+      |<?php
+      |  $lastBlog = new WP_Query($part);
+      |  if( $lastBlog->have_posts() ):
+      |    while($lastBlog->have_posts() ): $lastBlog->the_post();
+      |?>
+      |     <?php $review = types_render_field( "review_images", array('raw' => true) ); ?>
+      .review_buy_elem
+        a(href!="<?php echo $review; ?>" class="fancybox fancybox_1")
+          img(src!="<?php echo $review; ?>")
+      |<?php
+      |    endwhile;
+      |  endif;
+      |?>
+  footer.white

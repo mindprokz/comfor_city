@@ -28,24 +28,24 @@ export default function () {
   ];
 
   let _markersImageShop = [
-    'images/markers/hyndai.png',
-    'images/markers/zhiger.png',
-    'images/markers/korzina.png',
-    'images/markers/uzhni.png',
-    'images/markers/uzhni.png',
-    'images/markers/prospekt.png',
-    'images/markers/giper.png',
-    'images/markers/inomark.png',
-    'images/markers/avangard.png',
-    'images/markers/krepesh.png',
-    'images/markers/laki.png',
-    'images/markers/BMW.png',
-    'images/markers/style-a.png',
-    'images/markers/palitra.png',
-    'images/markers/avtomir.png',
-    'images/markers/autocenter.png',
-    'images/markers/continental.png',
-    'images/markers/main.png',
+    'http://comfortcity.kz/wp-content/themes/comfort/images/markers/hyndai.png',
+    'http://comfortcity.kz/wp-content/themes/comfort/images/markers/zhiger.png',
+    'http://comfortcity.kz/wp-content/themes/comfort/images/markers/korzina.png',
+    'http://comfortcity.kz/wp-content/themes/comfort/images/markers/uzhni.png',
+    'http://comfortcity.kz/wp-content/themes/comfort/images/markers/uzhni.png',
+    'http://comfortcity.kz/wp-content/themes/comfort/images/markers/prospekt.png',
+    'http://comfortcity.kz/wp-content/themes/comfort/images/markers/giper.png',
+    'http://comfortcity.kz/wp-content/themes/comfort/images/markers/inomark.png',
+    'http://comfortcity.kz/wp-content/themes/comfort/images/markers/avangard.png',
+    'http://comfortcity.kz/wp-content/themes/comfort/images/markers/krepesh.png',
+    'http://comfortcity.kz/wp-content/themes/comfort/images/markers/laki.png',
+    'http://comfortcity.kz/wp-content/themes/comfort/images/markers/BMW.png',
+    'http://comfortcity.kz/wp-content/themes/comfort/images/markers/style-a.png',
+    'http://comfortcity.kz/wp-content/themes/comfort/images/markers/palitra.png',
+    'http://comfortcity.kz/wp-content/themes/comfort/images/markers/avtomir.png',
+    'http://comfortcity.kz/wp-content/themes/comfort/images/markers/autocenter.png',
+    'http://comfortcity.kz/wp-content/themes/comfort/images/markers/continental.png',
+    'http://comfortcity.kz/wp-content/themes/comfort/images/markers/main.png',
   ];
 
   // Добавляем на карту метки
@@ -74,15 +74,15 @@ export default function () {
   ];
 
   let _markersImagerelax = [
-    'images/markers/serik.png',
-    'images/markers/tennis.png',
-    'images/markers/arena.png',
-    'images/markers/enbek.png',
-    'images/markers/winPark.png',
-    'images/markers/sobor.png',
-    'images/markers/etnopark.png',
-    'images/markers/mechet.png',
-    'images/markers/main.png',
+    'http://comfortcity.kz/wp-content/themes/comfort/images/markers/serik.png',
+    'http://comfortcity.kz/wp-content/themes/comfort/images/markers/tennis.png',
+    'http://comfortcity.kz/wp-content/themes/comfort/images/markers/arena.png',
+    'http://comfortcity.kz/wp-content/themes/comfort/images/markers/enbek.png',
+    'http://comfortcity.kz/wp-content/themes/comfort/images/markers/winPark.png',
+    'http://comfortcity.kz/wp-content/themes/comfort/images/markers/sobor.png',
+    'http://comfortcity.kz/wp-content/themes/comfort/images/markers/etnopark.png',
+    'http://comfortcity.kz/wp-content/themes/comfort/images/markers/mechet.png',
+    'http://comfortcity.kz/wp-content/themes/comfort/images/markers/main.png',
   ];
 
   // Добавляем на карту метки
@@ -111,14 +111,14 @@ export default function () {
   ];
 
   let _markersImageLearn = [
-    'images/markers/altyn.png',
-    'images/markers/erkentai.png',
-    'images/markers/102.png',
-    'images/markers/akbole.png',
-    'images/markers/akkniet.png',
-    'images/markers/gramot.png',
-    'images/markers/gvozd.png',
-    'images/markers/main.png',
+    'http://comfortcity.kz/wp-content/themes/comfort/images/markers/altyn.png',
+    'http://comfortcity.kz/wp-content/themes/comfort/images/markers/erkentai.png',
+    'http://comfortcity.kz/wp-content/themes/comfort/images/markers/102.png',
+    'http://comfortcity.kz/wp-content/themes/comfort/images/markers/akbole.png',
+    'http://comfortcity.kz/wp-content/themes/comfort/images/markers/akkniet.png',
+    'http://comfortcity.kz/wp-content/themes/comfort/images/markers/gramot.png',
+    'http://comfortcity.kz/wp-content/themes/comfort/images/markers/gvozd.png',
+    'http://comfortcity.kz/wp-content/themes/comfort/images/markers/main.png',
   ];
 
   // Добавляем на карту метки
@@ -139,8 +139,8 @@ export default function () {
   ];
 
   let _markersImageHealth = [
-    'images/markers/polikl.png',
-    'images/markers/main.png',
+    'http://comfortcity.kz/wp-content/themes/comfort/images/markers/polikl.png',
+    'http://comfortcity.kz/wp-content/themes/comfort/images/markers/main.png',
   ]
 
   // Добавляем на карту метки
@@ -161,7 +161,7 @@ function initMap() {
 
   window.application.map.map = new google.maps.Map(document.querySelector('#map'), {
     center: {lat: 49.784215, lng: 73.137432},
-    zoom: 14,
+    zoom: 15,
     scrollwheel : false,
     zoomControl: true,
     zoomControlOptions: {

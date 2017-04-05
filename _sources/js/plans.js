@@ -1,12 +1,48 @@
 export default function () {
 
+  // closer for plan_a_office
+  document.querySelector('.plan_A_office .closer').addEventListener('click', () => {
+    document.querySelector('.plan_A_office').classList.add('close');
+  });
+
+  // opener for plan_a_office
+  [...document.querySelectorAll('.first_front .shape_rect_office')].forEach( (elem) => {
+    elem.addEventListener('click', () => {
+      document.querySelector('.plan_A_office').classList.remove('close');
+    });
+  });
+
+  // closer for plan_b_office
+  document.querySelector('.plan_B_office .closer').addEventListener('click', () => {
+    document.querySelector('.plan_B_office').classList.add('close');
+  });
+
+  // opener for plan_b_office
+  [...document.querySelectorAll('.second_front .shape_rect_office')].forEach( (elem) => {
+    elem.addEventListener('click', () => {
+      document.querySelector('.plan_B_office').classList.remove('close');
+    });
+  });
+
+  // closer for plan_c_office
+  document.querySelector('.plan_C_office .closer').addEventListener('click', () => {
+    document.querySelector('.plan_C_office').classList.add('close');
+  });
+
+  // opener for plan_c_office
+  [...document.querySelectorAll('.third_front .shape_rect_office')].forEach( (elem) => {
+    elem.addEventListener('click', () => {
+      document.querySelector('.plan_C_office').classList.remove('close');
+    });
+  });
+
   // closer for plan_a
   document.querySelector('.plan_A .closer').addEventListener('click', () => {
     document.querySelector('.plan_A').classList.add('close');
   });
 
   // opener for plan_a
-  [...document.querySelectorAll('.third_front rect')].forEach( (elem) => {
+  [...document.querySelectorAll('.first_front .shape_rect')].forEach( (elem) => {
     elem.addEventListener('click', () => {
       document.querySelector('.plan_A').classList.remove('close');
     });
@@ -19,20 +55,20 @@ export default function () {
   });
 
   // opener for plan_b
-  [...document.querySelectorAll('.second_front rect')].forEach( (elem) => {
+  [...document.querySelectorAll('.second_front .shape_rect')].forEach( (elem) => {
     elem.addEventListener('click', () => {
       document.querySelector('.plan_B').classList.remove('close');
     });
   });
 
 
-  // closer for plan_b
+  // closer for plan_c
   document.querySelector('.plan_C .closer').addEventListener('click', () => {
     document.querySelector('.plan_C').classList.add('close');
   });
 
-  // opener for plan_b
-  [...document.querySelectorAll('.first_front rect')].forEach( (elem) => {
+  // opener for plan_c
+  [...document.querySelectorAll('.third_front .shape_rect')].forEach( (elem) => {
     elem.addEventListener('click', () => {
       document.querySelector('.plan_C').classList.remove('close');
     });
@@ -82,18 +118,45 @@ function open_planInfo() {
     bedroomThirdSquare_plan : number -> Площадь третей спальни
     toulet_plan : number -> Кол-во туателов
     balcon_plan: number -> Кол-во балконов
-    number_flat: numbar -> Номер квартиры
+    number_flat: number -> Номер квартиры
+    livingRoom: number -> Площадь гостинной
+    onlyKitchen: number -> площадь только кухни
 
 */
 
-window.changeInfo = function changeInfo(pricePlan, imgPlan, type_plan, quantityRoom_plan, allSquare_plan, liveSquare_plan, kitchenSquare_plan, bedroomOneSquare_plan, bedroomTwoSquare_plan, bedroomThirdSquare_plan, toulet_plan, balcon_plan, number_flat) {
-  document.querySelector('#price_plan').textContent = pricePlan + ' тнг';
+window.changeInfo = function changeInfo(pricePlan, imgPlan, type_plan, quantityRoom_plan, allSquare_plan, liveSquare_plan, kitchenSquare_plan, bedroomOneSquare_plan, bedroomTwoSquare_plan, bedroomThirdSquare_plan, toulet_plan, balcon_plan, number_flat, livingRoom, onlyKitchen) {
   document.querySelector('#img_plan').src = "images/plans/" + imgPlan;
   document.querySelector('#type_plan').textContent = type_plan;
   document.querySelector('#quantityRoom_plan').textContent = quantityRoom_plan;
   document.querySelector('#allSquare_plan').textContent = allSquare_plan + "м";
   document.querySelector('#liveSquare_plan').textContent = liveSquare_plan + "м";
-  document.querySelector('#kitchenSquare_plan').textContent = kitchenSquare_plan + "м";
+
+  if (livingRoom === null) {
+    document.querySelector('#livingRoom').parentNode.parentNode.classList.add('none');
+  } else {
+    let elem = document.querySelector('#livingRoom');
+
+    elem.parentNode.parentNode.classList.contains('none') ? elem.parentNode.parentNode.classList.remove('none') : '';
+    elem.textContent =  livingRoom + "м";
+  }
+
+  if (onlyKitchen === null) {
+    document.querySelector('#onlyKitchen').parentNode.parentNode.classList.add('none');
+  } else {
+    let elem = document.querySelector('#onlyKitchen');
+
+    elem.parentNode.parentNode.classList.contains('none') ? elem.parentNode.parentNode.classList.remove('none') : '';
+    elem.textContent =  onlyKitchen + "м";
+  }
+
+  if (kitchenSquare_plan === null) {
+    document.querySelector('#kitchenSquare_plan').parentNode.parentNode.classList.add('none');
+  } else {
+    let elem = document.querySelector('#kitchenSquare_plan');
+
+    elem.parentNode.parentNode.classList.contains('none') ? elem.parentNode.parentNode.classList.remove('none') : '';
+    elem.textContent =  kitchenSquare_plan + "м";
+  }
 
   if (bedroomOneSquare_plan === null) {
     document.querySelector('#bedroomOneSquare_plan').parentNode.parentNode.classList.add('none');
@@ -104,7 +167,6 @@ window.changeInfo = function changeInfo(pricePlan, imgPlan, type_plan, quantityR
     elem.textContent =  bedroomOneSquare_plan + "м";
   }
 
-
   if (bedroomTwoSquare_plan === null) {
     document.querySelector('#bedroomTwoSquare_plan').parentNode.parentNode.classList.add('none');
   } else {
@@ -113,7 +175,6 @@ window.changeInfo = function changeInfo(pricePlan, imgPlan, type_plan, quantityR
     elem.parentNode.parentNode.classList.contains('none') ? elem.parentNode.parentNode.classList.remove('none') : '';
     elem.textContent =  bedroomTwoSquare_plan + "м";
   }
-
 
   if (bedroomThirdSquare_plan === null) {
     document.querySelector('#bedroomThirdSquare_plan').parentNode.parentNode.classList.add('none');

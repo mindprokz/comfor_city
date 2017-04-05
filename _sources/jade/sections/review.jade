@@ -1,28 +1,35 @@
+|<?php 
+|  $part = array(
+|    'post_type' => 'team', //Тип поста
+|    'posts_per_page' => 10,//Постов на одной странице
+|    'category_name' => 'team' //Категория постов
+|  );
+|?>
+
 a(name="sales")
 section.review
   .container
     h2="профессиональный и вежливый отдел продаж подробно расскажет о квартирах"
     .review_block
+      |<?php
+      |  $lastBlog = new WP_Query($part);
+      |  if( $lastBlog->have_posts() ):
+      |    while($lastBlog->have_posts() ): $lastBlog->the_post();
+      |      $photo = types_render_field( 'photo__team', array('raw' => true) );
+      |      $name = types_render_field( 'name__team', array('raw' => true) );
+      |      $status = types_render_field( 'status__team', array('raw' => true) );
+      |      $comment = types_render_field( 'comment__team', array('raw' => true) );
+      |      $contact = types_render_field( 'contact__team', array('html' => true) );
+      |?>
       .elem
         .header
-          img(src="images/sales.jpg", alt="")
-        .name="Владимир Поспелков"
-        .status="директор отдела продаж"
-        .adress!="Номер: +7 (705) 566 57 05"
-        p="Рады предложить доступные квартиры для комфортной жизни в перспективном районе с развитой и привлекательной инфраструктурой. Обязательно обращаетесь и я расскажу о выгодных ценах и как можно сэкономить при выплате кредита."
-        .adress!="Караганда <br> пр.Нуркена Абдирова, 36/3"
-      .elem
-        .header
-          img(src="images/manager.jpg", alt="")
-        .name="Дамир Токтамысов"
-        .status="менеджер по продажам"
-        p="С удовольствием помогу выбрать оптимальную квартиру, с учетом особенностей вашей семьи и ваших планов. Обязательно звоните и я расскажу вам важные детали в выборе квартиры."
-        .adress!="Караганда <br> ул. Приканальная и проспект Строителей <br> +7 (7212) 922-100 <br> Режим работы: <br> Пн.-Пт. с 09:00 до 18:30 <br> Обед с 12:30 до 14:00"
-      .elem
-        .header
-          img(src="images/manager_2.jpg", alt="")
-        .name="Ольга Болтушенко"
-        .status="менеджер по продажам"
-        p="Всегда с радостью расскажу  о комфортных и уютных квартирах в надежном доме.  Обязательно звоните, и я расскажу  важную информацию о переезде."
-        .adress!="Караганда <br> пр.Нуркена Абдирова, 36/3 <br> +7 (7212) 922-100  <br> Режим работы: <br> Пн.-Пт. с 09:00 до 18:00 <br> Обед с 13.00 до 14.00"
+          img(src!="<?php echo $photo; ?>", alt="")
+        .name!="<?php echo $name?>"
+        .status!="<?php echo $status; ?>"
+        p!="<?php echo $comment; ?>"
+        .adress!="<?php echo $contact; ?>"
+      |<?php
+      |    endwhile;
+      |  endif;
+      |?>
   footer.white

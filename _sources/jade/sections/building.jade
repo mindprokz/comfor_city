@@ -3,12 +3,11 @@ section.building
   .container
     h3="надежность дома гарантируется"
     .wrap.mobile_list
-      img(src="images/adj_local.jpg")
-      img(src="images/adj_local2.jpg")
-      img(src="images/adj_local3.jpg")
+      img(src!="<?php echo get_template_directory_uri();?>/images/adj_local.jpg")
+      img(src!="<?php echo get_template_directory_uri();?>/images/adj_local2.jpg")
+      img(src!="<?php echo get_template_directory_uri();?>/images/adj_local3.jpg")
     .wrap
-      .home_photo
-        img(src="images/dom_gar.jpg", alt="")
+      img(src!="<?php echo get_template_directory_uri();?>/images/dom_gar.jpg", alt="" style="width: 100%")
     .info
       ul
         li!="<b>Качеством</b> строительных материалов"
@@ -16,7 +15,7 @@ section.building
       .reg
         .reg_elem
           .icon
-            img(src="images/prorab_2.png", alt="")
+            img(src!="<?php echo get_template_directory_uri();?>/images/prorab_2.png", alt="")
           h5.name="Мирзабаев Альберт Набидуллаевич"
           h5.status="начальник участка"
           h5.work
@@ -25,7 +24,7 @@ section.building
             span="С 2014 года тоо Eurasia Building прораб, начальник участка."
         .reg_elem
           .icon
-            img(src="images/prorab_3.png", alt="")
+            img(src!="<?php echo get_template_directory_uri();?>/images/prorab_3.png", alt="")
           h5.name="Садуакас Дархан Тлекович"
           h5.status="Директор по производству"
           h5.work

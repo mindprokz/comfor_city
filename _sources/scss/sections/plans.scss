@@ -68,6 +68,14 @@
   &.close {
     transform: translateX(-100%);
   }
+
+  .content {
+    transform: scaleY(-1);
+
+    img {
+      transform: scaleY(-1);
+    }
+  }
 }
 
 .plans .plan .closer,
@@ -107,7 +115,8 @@
   }
 }
 
-.plans .shape_rect {
+.plans .shape_rect,
+.plans .shape_rect_office {
   fill: rgba(#db9023, 0.1);
   cursor: pointer;
   transition: fill 0.3s ease;
@@ -286,4 +295,16 @@
 
 .plans .none {
   display: none;
+}
+
+.plans .plan_C .content img {
+  transform: scaleY(-1) translateX(-26px);
+}
+
+.plans .plan_A .content img {
+  transform: scaleY(-1) translateX(-9px);
+}
+
+.plans .plan_B .content img {
+  transform: scaleY(-1) translateX(-9px);
 }

@@ -99,7 +99,7 @@ gulp.task('jade', () => {
   gulp.src(jadePath.from)
   .pipe(pug({ pretty: true }))
   .pipe(rename(function (path) {
-    path.extname = ".html"
+    path.extname = ".php"
   }))
   .pipe(gulp.dest(jadePath.to));
 

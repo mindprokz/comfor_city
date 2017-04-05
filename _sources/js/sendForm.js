@@ -11,7 +11,7 @@ export default class sendForm {
       $("#application").submit( () => {
         $.ajax({
           type: "POST",
-          url: "mail.php",
+          url: "http://comfortcity.kz/wp-content/themes/comfort/mail.php",
           data: data
         }).done(function (value) {
           let mail = document.getElementById(idMail);

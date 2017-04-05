@@ -1,8 +1,8 @@
 script(src="https://code.jquery.com/jquery-2.2.4.min.js")
-script(src="libs/fancybox/source/jquery.fancybox.pack.js")
+script(src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.6/js/jquery.fancybox.min.js")
 script(src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.6.1/jquery.flexslider-min.js")
 script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkS0y-j9aq7GAuQPJJy5uhEiVKIWBcTM4")
-script(src="bundle.js")
+script(src!="<?php echo get_template_directory_uri();?>/bundle.js")
 noscript
   div
     img(src="https://mc.yandex.ru/watch/39993590" style="position:absolute; left:-9999px;" alt="")

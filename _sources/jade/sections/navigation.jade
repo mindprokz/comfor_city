@@ -2,7 +2,7 @@ nav
   .container
     header
       a(href="#position" class="anchor")
-        img.logo(src="images/logo.png")
+        img.logo(src!="<?php echo get_template_directory_uri();?>/images/logo.png")
       .number-block
         .number!="+7 (7212) <b>922-100</b>"
         .button-open-form="Заказать обратный звонок"
@@ -14,15 +14,16 @@ nav
         a(href="#house" class="anchor")="Район"
         a(href="#prices" class="anchor")="Дом"
         a(href="#reliability" class="anchor")="Надежность"
-        //a(href="#building" class="anchor")="Строительство"
+        a(href="#building" class="anchor")="Фотоотчет"
         a(href="#flats" class="anchor")="Квартиры"
         a(href="#newpeople" class="anchor")="Новосёлам"
-        //a(href="#officces" class="anchor")="Офисы"
+        a(href="#blog" class="anchor")="Статьи"
+        //a(href="#officces" class="anchor")="Офисы" rev_buy
         a(href="#developers" class="anchor")="Девелопер"
+        a(href="#rev_buy" class="anchor")="Отзывы"
         //a(href="#reviews" class="anchor")="Отзывы"
         a(href="#size" class="anchor")="Цены и скидки"
         a(href="#sales" class="anchor")="Продажи"
         .number-block.mobile_number-block
           .number!="+7 (7212) <b>922-100</b>"
           .button-open-form="Заказать обратный звонок"
-      

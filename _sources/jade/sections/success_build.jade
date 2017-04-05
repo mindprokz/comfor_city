@@ -1,0 +1,47 @@
+|<?php 
+|  $part = array(
+|    'post_type' => 'success_build', //Тип поста
+|    'posts_per_page' => 10,//Постов на одной странице
+|    'category_name' => 'build' //Категория постов
+|  );
+|?>
+
+|<?php 
+|  $test = array(
+|    'post_type' => 'success_build', //Тип поста
+|    'posts_per_page' => 10,//Постов на одной странице
+|    'category_name' => 'build' //Категория постов
+|  );
+|?>
+section.main_1
+  a(name="building")
+  .container
+    h3!="Ход строительства"
+    ul.line_month
+      |<?php
+      |  $lastBlog = new WP_Query($part);
+      |  if( $lastBlog->have_posts() ):
+      |    while($lastBlog->have_posts() ): $lastBlog->the_post();
+      |?>
+      li!="<?php the_title(); ?>"
+      |<?php
+      |    endwhile;
+      |  endif;
+      |?>
+    |<?php
+    |  $lastBlog = new WP_Query($test);
+    |  if( $lastBlog->have_posts() ):
+    |    while($lastBlog->have_posts() ): $lastBlog->the_post();
+    |      $slides = explode (' ', types_render_field( 'photo_build', array('raw' => true) ) );
+    |?>
+    .flexslider
+      ul.slides
+        | <?php foreach( $slides as $slide): ?>
+        li
+          img(src!="<?php echo $slide; ?>")
+        | <?php endforeach;?>
+    |<?php
+    |    endwhile;
+    |  endif;
+    |?>
+  footer.blue

@@ -2,18 +2,19 @@ a(name="position")
 section.balls
   .flexslider
     ul.slides
-      //- li
-      //-   .background_slide(style="background: url(images/balls.jpg); background-size: cover;")
-      //-     header="развитие и приятный отдых для детей"
-      //-     .container
-      //-       img(src="images/slide1_1.jpg").first
       li
-        .background_slide(style="background: url(images/green.jpg); background-size: cover;")
+        .background_slide(style="background: url(http://comfortcity.kz/wp-content/themes/comfort/images/green.jpg); background-size: cover;")
           header="Трехкомнатные квартиры по цене двухкомнатных"
           .container
-            img(src="images/house_2.png").second
+            img(src!="<?php echo get_template_directory_uri();?>/images/house_2.png").second
             a(href="http://vkomforte.kz/" target="_blank")
-              img(src="images/house_1.png").third
+              img(src!="<?php echo get_template_directory_uri();?>/images/house_1.png").third
+      li
+        .background_slide(style="background: url(http://comfortcity.kz/wp-content/themes/comfort/images/green.jpg); background-size: cover;")
+          header="Вид детской площадки"
+          .container
+            img(src!="<?php echo get_template_directory_uri();?>/images/house_lit_1.jpg").second
+            img(src!="<?php echo get_template_directory_uri();?>/images/house_lit_2.jpg").third
   footer.white.slider_footer
   //- .info
   //-   .container

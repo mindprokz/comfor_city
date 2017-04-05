@@ -1,3 +1,8 @@
+/*
+Theme Name: Comfort theme
+Version: 1.0
+*/
+
 @import
   'sass/_susy.scss',
   'sections/reset.scss',
@@ -99,6 +104,10 @@ header {
       width: 600px;
     }
   }
+}
+
+.fancybox-skin {
+  padding: 0 !important;
 }
 
 .open_tab {
