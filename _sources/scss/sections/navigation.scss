@@ -19,6 +19,21 @@ nav {
     }
   }
 
+  .social-block {
+    padding-top: 35px;
+    float: right;
+    padding-right: 25px;
+
+    @media (max-width: 500px) {
+      display: none;
+    }
+
+    img {
+      width: 32px;
+      margin: 0 10px;
+    }
+  }
+
   .number-block {
     @include span(last 3);
 

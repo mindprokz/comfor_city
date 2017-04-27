@@ -59,4 +59,17 @@
       display: block;
     }
   }
+
+  #flat_calculator {
+    display: block;
+    width: 370px;
+    height: 70px;
+    border-radius: 5px;
+    border: 2px solid #f7af12;
+    margin: 25px auto;
+    background: transparent;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 20px;
+  }
 }

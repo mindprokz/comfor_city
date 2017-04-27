@@ -53,7 +53,10 @@
 
       img {
         display: inline;
-        max-height: 300px;
+
+        &.stock {
+          width: 500px;
+        }
 
         &.first {
           transform: translateY(25%);

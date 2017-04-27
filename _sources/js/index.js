@@ -52,6 +52,34 @@ document.querySelector('.modal .closer').addEventListener('click', function () {
   document.querySelector('.modal').classList.add('close_modal');
 });
 
+
+document.querySelector('.modal_calculate .closer').addEventListener('click', function () {
+  document.querySelector('.modal_calculate').classList.add('close_modal');
+});
+
+// калькулятор
+document.querySelector('#calculator').addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  let data = {
+    flat: document.querySelector('#calculator input[name="flat"]').value,
+    first_pay: document.querySelector('#calculator input[name="first_pay"]').value,
+    long: document.querySelector('#calculator input[name="long"]').value,
+    percent: document.querySelector('#calculator input[name="percent"]').value,
+  }
+
+  let m = (data.flat - data.first_pay),
+    p = m * (data.percent / 100) * data.long,
+    res = (m + p) / (12 * data.long),
+    _res = Math.round(res)
+
+  document.querySelector('#calculator #price').textContent = _res + ' тенге';
+});
+
+document.querySelector('#flat_calculator').addEventListener('click', e => {
+  document.querySelector('.modal_calculate').classList.remove('close_modal');
+});
+
 // Отправка писем
 document.querySelector('#application').addEventListener('submit', (e) => {
   e.preventDefault();

@@ -125,7 +125,7 @@ function open_planInfo() {
 */
 
 window.changeInfo = function changeInfo(pricePlan, imgPlan, type_plan, quantityRoom_plan, allSquare_plan, liveSquare_plan, kitchenSquare_plan, bedroomOneSquare_plan, bedroomTwoSquare_plan, bedroomThirdSquare_plan, toulet_plan, balcon_plan, number_flat, livingRoom, onlyKitchen) {
-  document.querySelector('#img_plan').src = "images/plans/" + imgPlan;
+  document.querySelector('#img_plan').src = "http://comfortcity.kz/wp-content/themes/comfort/images/plans/" + imgPlan;
   document.querySelector('#type_plan').textContent = type_plan;
   document.querySelector('#quantityRoom_plan').textContent = quantityRoom_plan;
   document.querySelector('#allSquare_plan').textContent = allSquare_plan + "м";
