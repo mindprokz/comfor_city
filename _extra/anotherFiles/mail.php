@@ -30,7 +30,7 @@ $msg .= "</body></html>";
 // отправка сообщения
 if(@mail($sendto, $subject, $msg, $headers)) {
 	echo '<div class="message">
-			<img src="images/ok.png" alt="">
+			<img src="http://comfortcity.kz/wp-content/themes/comfort/images/images/ok.png" alt="">
 			<div class="message_text">
 				<h3>Спасибо за заявку, '.$_POST['name'].'</h3>
 				<p>Мы свяжемся с вами в ближайшее время</p>
@@ -38,7 +38,7 @@ if(@mail($sendto, $subject, $msg, $headers)) {
 		</div>';
 } else {
 	echo '<div class="message">
-			<img src="images/ok.png" alt="">
+			<img src="http://comfortcity.kz/wp-content/themes/comfort/images/images/er.png" alt="">
 			<div class="message_text">
 				<h3>Ошибка отправления</h3>
 				<p>Сообщение не было доставлено</p>

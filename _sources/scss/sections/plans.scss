@@ -180,7 +180,10 @@
   padding-bottom: 15px;
 }
 
-.plans .plan_info .container { position: relative; }
+.plans .plan_info .container {
+  position: relative;
+  z-index: 2;
+}
 
 .plans .plan_info img[alt="compas"] {
   position: absolute;
@@ -214,6 +217,28 @@
     margin-top: 80px;
     padding-left: 20px;
     padding-right: 20px;
+  }
+
+  .tabs {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 15px;
+
+    .tab {
+      height: 35px;
+      width: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-bottom: 20px;
+      box-sizing: border-box;
+      cursor: pointer;
+
+      &.active {
+        border-bottom: 2px solid #f8b133;
+        color: #f8b133;
+      }
+    }
   }
 }
 

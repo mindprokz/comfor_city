@@ -1,4 +1,13 @@
 export default function () {
+  //tabs changer
+  [...document.querySelectorAll('.plans .plan_info .image_plan .tabs .tab')]
+    .forEach(el => {
+      el.addEventListener('click', e => {
+        document.querySelector('.plans .plan_info .image_plan .tabs .tab.active').classList.remove('active');
+        el.classList.add('active');
+        document.querySelector('#img_plan').src = el.dataset.img_id;
+      });
+    });
 
   // closer for plan_a_office
   document.querySelector('.plan_A_office .closer').addEventListener('click', () => {
@@ -78,6 +87,9 @@ export default function () {
   // closer for plan_info
   document.querySelector('.plan_info .closer').addEventListener('click', () => {
     document.querySelector('.plan_info').classList.add('close');
+    document.querySelector('.plans .plan_info .image_plan .tabs .tab.active').classList.remove('active');
+    document.querySelectorAll('.plans .plan_info .image_plan .tabs .tab')[0].classList.add('active');
+
   });
 
   [...document.querySelectorAll('.plans .shape_rect')].forEach( (elem) => {
@@ -126,6 +138,8 @@ function open_planInfo() {
 
 window.changeInfo = function changeInfo(pricePlan, imgPlan, type_plan, quantityRoom_plan, allSquare_plan, liveSquare_plan, kitchenSquare_plan, bedroomOneSquare_plan, bedroomTwoSquare_plan, bedroomThirdSquare_plan, toulet_plan, balcon_plan, number_flat, livingRoom, onlyKitchen) {
   document.querySelector('#img_plan').src = "http://comfortcity.kz/wp-content/themes/comfort/images/plans/" + imgPlan;
+  document.querySelector('#tab_plans').dataset.img_id = "http://comfortcity.kz/wp-content/themes/comfort/images/plans/" + imgPlan;
+  document.querySelector('#tab_3Dplans').dataset.img_id = "http://comfortcity.kz/wp-content/themes/comfort/images/plans/" + imgPlan.split('/')[0] + '/3d' + imgPlan.split('/')[1].replace('png', 'jpg');
   document.querySelector('#type_plan').textContent = type_plan;
   document.querySelector('#quantityRoom_plan').textContent = quantityRoom_plan;
   document.querySelector('#allSquare_plan').textContent = allSquare_plan + "м";

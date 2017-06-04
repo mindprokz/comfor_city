@@ -45,11 +45,11 @@ plansInit();
 
 // События модального окна
 document.querySelector('nav .number-block .button-open-form').addEventListener('click', function () {
-  document.querySelector('.modal').classList.remove('close_modal');
+  document.querySelector('.modal_main').classList.remove('close_modal');
 });
 
-document.querySelector('.modal .closer').addEventListener('click', function () {
-  document.querySelector('.modal').classList.add('close_modal');
+document.querySelector('.modal_main .closer').addEventListener('click', function () {
+  document.querySelector('.modal_main').classList.add('close_modal');
 });
 
 
@@ -85,14 +85,14 @@ document.querySelector('#application').addEventListener('submit', (e) => {
   e.preventDefault();
 
   var data = {
-    name: document.querySelector('.modal form input[name="name"]').value,
-    mail: document.querySelector('.modal form input[name="email"]').value,
-    telephone: document.querySelector('.modal form input[name="telephone"]').value,
+    name: document.querySelector('.modal_main form input[name="name"]').value,
+    mail: document.querySelector('.modal_main form input[name="email"]').value,
+    telephone: document.querySelector('.modal_main form input[name="telephone"]').value,
   }
 
   $.ajax({
     type: "POST",
-    url: "mail.php",
+    url: "http://comfortcity.kz/wp-content/themes/comfort/mail.php",
     data: data
   }).done(function (value) {
     let mail = document.getElementById('mail');
